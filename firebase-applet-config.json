@@ -1,12 +1,15 @@
-{
-  "projectId": "elhamb-shop",
-  "appId": "1:83057017557:web:a98e09193f344ab2cd185c",
-  "apiKey": "AIzaSyDMnqD6VxsNAwHyTAGBYExUaz0hDYr8rmY",
-  "authDomain": "elhamb-shop.firebaseapp.com",
-  "firestoreDatabaseId": "",
-  "storageBucket": "elhamb-shop.firebasestorage.app",
-  "messagingSenderId": "83057017557",
-  "measurementId": "",
-  "oAuthClientId": "",
-  "recaptchaSiteKey": ""
-}
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  projectId: "shoker-ghor",
+  appId: "1:138758321950:web:7ab1bc38596d38356af0f",
+  apiKey: "AIzaSyBWljWOkF7FYCKcDhz32QukL2uFF-AFIqg",
+  authDomain: "shoker-ghor.firebaseapp.com",
+  storageBucket: "shoker-ghor.firebasestorage.app",
+  messagingSenderId: "138758321950",
+  measurementId: "G-WVNZFE0B33"
+};
+
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
