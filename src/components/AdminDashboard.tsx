@@ -1413,7 +1413,7 @@ export const AdminDashboard: React.FC = () => {
             </button>
             <h1 className="text-lg font-semibold text-[#202223] flex items-center gap-2">
               <Package className="w-5 h-5 text-blue-600" />
-              Shoker ghor Shop Admin
+              Shoker ghor Admin
             </h1>
           </div>
           <div className="flex items-center gap-3">
