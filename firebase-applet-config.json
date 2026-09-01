@@ -1,15 +1,9 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-
-const firebaseConfig = {
-  projectId: "shoker-ghor",
-  appId: "1:138758321950:web:7ab1bc38596d38356af0f",
-  apiKey: "AIzaSyBWljWOkF7FYCKcDhz32QukL2uFF-AFIqg",
-  authDomain: "shoker-ghor.firebaseapp.com",
-  storageBucket: "shoker-ghor.firebasestorage.app",
-  messagingSenderId: "138758321950",
-  measurementId: "G-WVNZFE0B33"
-};
-
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+{
+  "projectId": "shoker-ghor",
+  "appId": "1:138758321950:web:7ab1bc38596d38356af0f",
+  "apiKey": "AIzaSyBWljWOkF7FYCKcDhz32QukL2uFF-AFIqg",
+  "authDomain": "shoker-ghor.firebaseapp.com",
+  "storageBucket": "shoker-ghor.firebasestorage.app",
+  "messagingSenderId": "138758321950",
+  "measurementId": "G-WVNZFE0B33"
+}
