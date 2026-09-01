@@ -1226,7 +1226,7 @@ export const AdminDashboard: React.FC = () => {
                   referrerPolicy="no-referrer"
                   className="w-8 h-8 rounded-full border border-[var(--color-gold)] object-cover"
                 />
-                <span className="font-bold text-sm tracking-widest text-[var(--color-gold)]">Shoker ghorSHOP</span>
+                <span className="font-bold text-sm tracking-widest text-[var(--color-gold)]">Shoker ghor</span>
               </div>
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -1322,7 +1322,7 @@ export const AdminDashboard: React.FC = () => {
             className="w-9 h-9 rounded-full border border-[var(--color-gold)] object-cover shadow-[0_0_8px_rgba(212,175,55,0.15)]"
           />
           <div className="flex flex-col">
-            <span className="font-bold text-sm tracking-widest text-[var(--color-gold)] leading-none">Shoker ghorSHOP</span>
+            <span className="font-bold text-sm tracking-widest text-[var(--color-gold)] leading-none">Shoker ghor</span>
             <span className="text-[9px] text-[#8a8a8a] mt-1">Admin Panel</span>
           </div>
         </div>
@@ -3757,7 +3757,7 @@ export const AdminDashboard: React.FC = () => {
                   <div className="bg-white border border-[#e1e3e5] rounded-xl shadow-sm overflow-hidden">
                     <div className="px-5 py-4 border-b border-[#e1e3e5] flex justify-between items-center bg-gray-50">
                       <h3 className="font-semibold text-sm text-[#202223]">Recent orders</h3>
-                      <span className="text-xs text-[#6d7175]">Shoker ghorSHOP Sync active</span>
+                      <span className="text-xs text-[#6d7175]">Shoker ghor Sync active</span>
                     </div>
 
                     {orders.length === 0 ? (
@@ -5303,7 +5303,7 @@ export const AdminDashboard: React.FC = () => {
                     </a>
                     <a
                       href="/namecheap-ready.zip"
-                      download="Shoker ghorShop-Namecheap-cPanel-Deployment-Package.zip"
+                      download="Shoker ghor-Namecheap-cPanel-Deployment-Package.zip"
                       className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/15 text-gray-200 font-medium rounded-xl border border-white/20 transition-colors text-xs whitespace-nowrap cursor-pointer"
                     >
                       <ExternalLink className="w-4 h-4" />

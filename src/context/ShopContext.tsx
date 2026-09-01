@@ -391,7 +391,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const [adminUsername, setAdminUsername] = useState<string>(() => {
-    return localStorage.getItem('Shoker ghor_admin_username') || 'Shoker ghorSHOP';
+    return localStorage.getItem('Shoker ghor_admin_username') || 'Shoker ghor';
   });
 
   const [adminPassword, setAdminPassword] = useState<string>(() => {

@@ -912,7 +912,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                   {/* Creator Info */}
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-[14px] text-[var(--color-gold-light)] flex items-center gap-1">
-                      @Shoker ghorshopbd <ShieldCheck className="w-4 h-4 text-sky-400 fill-current" />
+                      @Shoker ghorbd <ShieldCheck className="w-4 h-4 text-sky-400 fill-current" />
                     </span>
                     <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">Follow</span>
                   </div>
