@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/namecheap-ready.zip", "destination": "/api" },
+    { "source": "/api/download-package", "destination": "/api" },
+    { "source": "/api/export/namecheap-zip", "destination": "/api" },
+    { "source": "/((?!api|assets|favicon.ico|logo.png).*)", "destination": "/index.html" }
+  ]
+}

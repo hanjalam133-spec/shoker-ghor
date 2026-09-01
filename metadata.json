@@ -1,0 +1,6 @@
+{
+  "name": "Elham Shop - Premium Panjabi Store",
+  "description": "A modern, luxury e-commerce platform for premium traditional men's wear.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
