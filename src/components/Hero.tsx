@@ -4,7 +4,6 @@ import { useShop } from '../context/ShopContext';
 export const Hero: React.FC = () => {
   const { storeBanner } = useShop();
 
-  // যদি ব্যানার না থাকে তবে এটি দেখাবে না
   if (!storeBanner) return null;
 
   return (
