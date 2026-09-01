@@ -455,7 +455,7 @@ export const AdminDashboard: React.FC = () => {
     title: "",
     price: "",
     originalPrice: "",
-    category: (categories[0] || "Premium Panjabi") as Category,
+    category: (categories[0] || "Premium Product") as Category,
     image: "",
     gallery: [] as string[],
     description: "",
@@ -516,7 +516,7 @@ export const AdminDashboard: React.FC = () => {
     const rows = orders.map(o => {
       const itemNotes = o.items.map(item => {
         const prod = products.find(p => p.id === item.productId);
-        return `${prod?.title || 'Panjabi'} (Size: ${item.size}, Qty: ${item.quantity})`;
+        return `${prod?.title || 'Product'} (Size: ${item.size}, Qty: ${item.quantity})`;
       }).join('; ');
       return [
         `"${o.id}"`,
@@ -540,7 +540,7 @@ export const AdminDashboard: React.FC = () => {
   };
 
   const handleCreateTestDemoOrder = () => {
-    const targetProd = products[0] || { id: 'led-high-tops-copy-copy', title: 'লক্সারিয়াস কটন পাঞ্জাবি', price: 1450 };
+    const targetProd = products[0] || { id: 'led-high-tops-copy-copy', title: 'লক্সারিয়াস কটন প্রোডাক্ট', price: 1450 };
     const randPhone = '017' + Math.floor(10000000 + Math.random() * 90000000);
     placeOrder({
       customer: {
@@ -1079,7 +1079,7 @@ export const AdminDashboard: React.FC = () => {
         title: "",
         price: "",
         originalPrice: "",
-        category: categories[0] || "Premium Panjabi",
+        category: categories[0] || "Premium Product",
         image: "",
         gallery: [],
         description: "",
@@ -1526,7 +1526,7 @@ export const AdminDashboard: React.FC = () => {
                     type="text" 
                     value={nameInput}
                     onChange={(e) => setNameInput(e.target.value)}
-                    placeholder="Shoker ghor Shop - Premium Panjabi & Luxury Wear"
+                    placeholder="Shoker ghor Shop - Premium Product & Luxury Wear"
                     className="w-full border border-gray-300 rounded px-3 py-2 text-xs outline-none focus:ring-1 focus:ring-black bg-white"
                   />
                   <span className="text-[10px] text-gray-500 block">ওয়েবসাইটের ট্যাব ও হেডারে এই নাম শো করবে।</span>
@@ -1619,7 +1619,7 @@ export const AdminDashboard: React.FC = () => {
                         onClick={() => setBannerInput('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=1200')}
                         className={`text-left text-[11px] p-2 rounded border transition-all ${bannerInput.includes('1594938298603') ? 'border-blue-600 bg-blue-50 font-bold text-blue-900' : 'border-gray-200 hover:bg-gray-50 text-gray-700'}`}
                       >
-                        💎 Luxury Panjabi Wear
+                        💎 Luxury 
                       </button>
                     </div>
                   </div>
@@ -1852,7 +1852,7 @@ export const AdminDashboard: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1 items-center">
                     <div className="text-xs text-amber-800 leading-relaxed font-light">
-                      💡 গ্রাহক যদি একসাথে নির্দিষ্ট সংখ্যার পাঞ্জাবি বা প্রোডাক্ট অর্ডার করে, তবে ডেলিভারি চার্জ অটোমেটিক <strong>০ টাকা (ফ্রি)</strong> হয়ে যাবে।
+                      💡 গ্রাহক যদি একসাথে নির্দিষ্ট সংখ্যার প্রোডাক্ট বা প্রোডাক্ট অর্ডার করে, তবে ডেলিভারি চার্জ অটোমেটিক <strong>০ টাকা (ফ্রি)</strong> হয়ে যাবে।
                     </div>
                     <div className="space-y-1">
                       <label className="text-[10px] font-bold text-amber-800 uppercase">কত পিস বা তার বেশি কিনলে ফ্রি ডেলিভারি পাবেন?</label>
@@ -2760,7 +2760,7 @@ export const AdminDashboard: React.FC = () => {
                   <div className="space-y-4">
                     <ActivityRow icon={ShoppingCart} color="text-green-500 bg-green-50" text="নতুন একটি অর্ডার পাওয়া গেছে" time="এইমাত্র" />
                     <ActivityRow icon={Tag} color="text-amber-500 bg-amber-50" text="নতুন ডিসকাউন্ট কুপন সচল করা হয়েছে" time="৩ ঘণ্টা আগে" />
-                    <ActivityRow icon={Package} color="text-blue-500 bg-blue-50" text="সেমসেং পাঞ্জাবি স্টকে রিফিল করা হয়েছে" time="৫ ঘণ্টা আগে" />
+                    <ActivityRow icon={Package} color="text-blue-500 bg-blue-50" text="সেমসেং প্রোডাক্ট স্টকে রিফিল করা হয়েছে" time="৫ ঘণ্টা আগে" />
                     <ActivityRow icon={Check} color="text-emerald-500 bg-emerald-50" text="৩টি পার্সেল SteadFast কুরিয়ারে পাঠানো হয়েছে" time="১ দিন আগে" />
                   </div>
                 </div>
@@ -4326,7 +4326,7 @@ export const AdminDashboard: React.FC = () => {
                           type="text"
                           value={menuForm.label}
                           onChange={(e) => setMenuForm({ ...menuForm, label: e.target.value })}
-                          placeholder="যেমন: সিল্ক কালেকশন, পাঞ্জাবি বাফার, ইত্যাদি"
+                          placeholder="যেমন: সিল্ক কালেকশন, প্রোডাক্ট বাফার, ইত্যাদি"
                           className="w-full text-xs border border-gray-300 rounded-lg px-3 py-2 bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                       </div>
@@ -4441,7 +4441,7 @@ export const AdminDashboard: React.FC = () => {
                       bannerImage: '',
                       galleryImages: [] as string[],
                       headline: '',
-                      subheadline: 'শহরের সেরা আরামদায়ক ও প্রিমিয়াম কোয়ালিটি পাঞ্জাবি। সীমিত সময়ের জন্য বিশেষ অফার!',
+                      subheadline: 'শহরের সেরা আরামদায়ক ও প্রিমিয়াম কোয়ালিটি প্রোডাক্ট। সীমিত সময়ের জন্য বিশেষ অফার!',
                       badgeText: '☀️ SUMMER COTTON SPECIAL',
                       discountPrice: 0,
                       featuresText: '১০০% প্রিমিয়াম সুতি কাপড়\nঅরিজিনাল এম্ব্রয়ডারি ডিজাইন\nক্যাশ অন ডেলিভারি সুবিধা\nসারা দেশে দ্রুত হোম ডেলিভারি',
@@ -4754,7 +4754,7 @@ export const AdminDashboard: React.FC = () => {
                       <div className="bg-amber-50/60 p-3.5 rounded-xl border border-amber-200/80 space-y-2">
                         <div className="flex items-center justify-between">
                           <label className="block font-bold text-gray-900">
-                            🖼️ পাঞ্জাবির গ্যালারি ছবিসমূহ ({landingForm.galleryImages?.length || 0} টি ছবি)
+                            🖼️ প্রোডাক্টর গ্যালারি ছবিসমূহ ({landingForm.galleryImages?.length || 0} টি ছবি)
                           </label>
                           <label className="bg-neutral-900 hover:bg-black text-white text-[11px] font-bold px-3 py-1 rounded-lg cursor-pointer flex items-center gap-1">
                             ➕ একাধিক ছবি আপলোড
@@ -5937,7 +5937,7 @@ export const AdminDashboard: React.FC = () => {
                             setFormData({ ...formData, image: e.target.value })
                           }
                           className="w-full border border-[#c9cccf] rounded-md px-3 py-1.5 text-xs focus:ring-2 focus:ring-[#005bd3] focus:border-[#005bd3] outline-none transition-shadow"
-                          placeholder="https://example.com/panjabi-main.jpg"
+                          placeholder="https://example.com/Product-main.jpg"
                         />
                       </div>
                     </details>
@@ -6017,7 +6017,7 @@ export const AdminDashboard: React.FC = () => {
                         value={galleryUrlInput}
                         onChange={(e) => setGalleryUrlInput(e.target.value)}
                         className="flex-1 border border-gray-300 rounded px-2.5 py-1 text-xs outline-none focus:ring-1 focus:ring-[#005bd3] bg-white"
-                        placeholder="https://example.com/panjabi-style2.jpg"
+                        placeholder="https://example.com/Product-style2.jpg"
                       />
                       <button
                         type="button"
@@ -6104,7 +6104,7 @@ export const AdminDashboard: React.FC = () => {
                       type="button"
                       onClick={() => {
                         const defaultQty = formData.packages.length + 1;
-                        const defaultName = defaultQty === 1 ? "১ পিস পাঞ্জাবি" : `${defaultQty} পিস ধামাকা কম্বো অফার`;
+                        const defaultName = defaultQty === 1 ? "১ পিস প্রোডাক্ট" : `${defaultQty} পিস ধামাকা কম্বো অফার`;
                         const basePrice = Number(formData.price) || 1000;
                         const discountFactor = defaultQty === 1 ? 1 : defaultQty === 2 ? 0.93 : 0.84;
                         const defaultPrice = Math.round(basePrice * defaultQty * discountFactor);
@@ -6140,21 +6140,21 @@ export const AdminDashboard: React.FC = () => {
                           const defaultPkgs = [
                             {
                               id: 'pkg-1-' + crypto.randomUUID(),
-                              name: '১ পিস পাঞ্জাবি অফার',
+                              name: '১ পিস প্রোডাক্ট অফার',
                               price: basePrice,
                               quantity: 1,
                               description: 'স্ট্যান্ডার্ড প্যাক'
                             },
                             {
                               id: 'pkg-2-' + crypto.randomUUID(),
-                              name: '২ পিস পাঞ্জাবি (কম্বো অফার)',
+                              name: '২ পিস প্রোডাক্ট (কম্বো অফার)',
                               price: Math.round(basePrice * 2 - 130),
                               quantity: 2,
                               description: '৳১৩০ ডিসকাউন্ট!'
                             },
                             {
                               id: 'pkg-3-' + crypto.randomUUID(),
-                              name: '৩ পিস পাঞ্জাবি (ধামাকা কম্বো)',
+                              name: '৩ পিস প্রোডাক্ট (ধামাকা কম্বো)',
                               price: Math.round(basePrice * 3 - 470),
                               quantity: 3,
                               description: '৳৪৭০ ছাড় + ফ্রি ডেলিভারি!'
@@ -6652,7 +6652,7 @@ export const AdminDashboard: React.FC = () => {
               {/* Ordered Items Table */}
               <div>
                 <h4 className="font-bold text-gray-900 text-sm mb-3 flex items-center justify-between">
-                  <span>🛍️ অর্ডারকৃত পাঞ্জাবি ও সাইজ</span>
+                  <span>🛍️ অর্ডারকৃত প্রোডাক্ট ও সাইজ</span>
                   <span className="text-xs text-gray-500 font-normal">
                     মোট আইটেম: {(selectedOrderForDetails.items || []).length} টি
                   </span>
@@ -6661,7 +6661,7 @@ export const AdminDashboard: React.FC = () => {
                   <table className="w-full text-left text-xs">
                     <thead className="bg-gray-100 text-gray-700 border-b border-gray-200">
                       <tr>
-                        <th className="p-2.5 font-bold">ছবি & পাঞ্জাবির নাম</th>
+                        <th className="p-2.5 font-bold">ছবি & প্রোডাক্টর নাম</th>
                         <th className="p-2.5 font-bold">সাইজ (Size)</th>
                         <th className="p-2.5 font-bold text-center">পরিমাণ</th>
                         <th className="p-2.5 font-bold text-right">মূল্য</th>
@@ -6670,7 +6670,7 @@ export const AdminDashboard: React.FC = () => {
                     <tbody className="divide-y divide-gray-200">
                       {(selectedOrderForDetails.items || []).map((item, i) => {
                         const prod = products.find(p => p.id === item.productId);
-                        const prodTitle = prod ? prod.title : 'পাঞ্জাবি';
+                        const prodTitle = prod ? prod.title : 'প্রোডাক্ট';
                         const prodImg = item.selectedImage || prod?.image || 'https://images.unsplash.com/photo-1583391733959-b0510f6992dd?auto=format&fit=crop&q=80&w=800';
 
                         return (

@@ -278,7 +278,7 @@ export const playOrderSuccessSound = () => {
                  name.includes('mitu');
         }) || bnVoices[0];
         
-        let msgText = "স্যার, অর্ডার সাবমিট হয়েছে।";
+        let msgText = "স্যার, অর্ডার সাবমিট হইছে।";
         let msgLang = "bn-BD";
         let selectedVoice = bnVoice || null;
         
@@ -432,7 +432,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const [storeName, setStoreName] = useState<string>(() => {
-    return localStorage.getItem('Shoker ghor_store_name') || 'Shoker ghor Shop - Premium Panjabi & Luxury Wear';
+    return localStorage.getItem('Shoker ghor_store_name') || 'Shoker ghor Shop - Premium Product & Luxury Wear';
   });
 
   const [storeFavicon, setStoreFavicon] = useState<string>(() => {
@@ -447,7 +447,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [heroBadge, setHeroBadge] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_badge') || '💎 HERITAGE ELEGANCE • ROYAL COLLECTION');
   const [heroTitle1, setHeroTitle1] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_title1') || 'EMBODY REGAL');
   const [heroTitle2, setHeroTitle2] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_title2') || 'TRADITION');
-  const [heroSubtitle, setHeroSubtitle] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_subtitle') || 'Handcrafted Bangladeshi Jamdani weaves, premium royal silk, Kabli suits, and breathable luxury cotton Panjabis designed for Eid, Weddings, and Festive Celebrations.');
+  const [heroSubtitle, setHeroSubtitle] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_subtitle') || 'Handcrafted Bangladeshi Jamdani weaves, premium royal silk, Kabli suits, and breathable luxury cotton Products designed for Eid, Weddings, and Festive Celebrations.');
 
   // Header state
   const [headerBgColor, setHeaderBgColor] = useState<string>(() => localStorage.getItem('Shoker ghor_header_bg_color') || '#0a1128');
@@ -589,11 +589,11 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
           title: 'Summer Cotton Special Offer',
           productId: 'led-high-tops-copy-copy',
           bannerImage: 'https://cdn.shopify.com/s/files/1/0712/1820/0746/files/Generated_Image_January_25_2026_-_7_56PM.png?v=1780922542',
-          headline: 'এক্সক্লুসিভ সামার কটন কালেকশন ২০২৬',
-          subheadline: 'শহরের সেরা আরামদায়ক ও প্রিমিয়াম কোয়ালিটি পাঞ্জাবি। সীমিত সময়ের জন্য বিশেষ ডিসকাউন্ট!',
+          headline: 'এক্সক্লুসিভ কালেকশন ২০২৬',
+          subheadline: 'শহরের সেরা আরামদায়ক ও প্রিমিয়াম কোয়ালিটি প্রোডাক্ট। সীমিত সময়ের জন্য বিশেষ ডিসকাউন্ট!',
           badgeText: '☀️ SUMMER COTTON SPECIAL',
           discountPrice: 999,
-          features: ['১০০% প্রিমিয়াম সুতি কাপড়', 'অরিজিনাল এম্ব্রয়ডারি ডিজাইন', 'ক্যাশ অন ডেলিভারি সুবিধা', 'সারা দেশে দ্রুত হোম ডেলিভারি'],
+          features: ['১০০% প্রিমিয়াম ', 'অরিজিনাল ডিজাইন', 'ক্যাশ অন ডেলিভারি সুবিধা', 'সারা দেশে দ্রুত হোম ডেলিভারি'],
           isActive: true,
           createdAt: new Date().toISOString()
         },
@@ -603,11 +603,11 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
           title: 'Indian Katan Premium Offer',
           productId: 'led-high-tops-copy-copy-copy',
           bannerImage: 'https://cdn.shopify.com/s/files/1/0712/1820/0746/files/GeneratedImageDecember11_2025-9_24PM_1_1_0a4aaf81-51b5-4c82-a4c6-c28720493b07.png?v=1780922516',
-          headline: 'প্রিমিয়াম সিকুয়েন্স এম্বোটারি পাঞ্জাবি',
-          subheadline: 'ইন্ডিয়ান কাতান কাপড়ের প্রিমিয়াম স্নাব বাটন পাঞ্জাবি। রাজকীয় আভিজাত্য ও আধুনিক ফ্যাশনের অনন্য মেলবন্ধন!',
-          badgeText: '👑 INDIKAN KATAN EXCLUSIVE',
+          headline: 'প্রিমিয়াম প্রোডাক্ট',
+          subheadline: 'প্রোডাক্ট!',
+          badgeText: '👑 EXCLUSIVE',
           discountPrice: 1450,
-          features: ['প্রিমিয়াম সিকুয়েন্স এম্বোটারি ডিজাইন', '১০০% অরিজিনাল ইন্ডিয়ান কাতান', 'প্রিমিয়াম স্নাব মেটাল বাটন', 'সারা দেশে ক্যাশ অন ডেলিভারি'],
+          features: ['১০০% অরিজিনাল প্রিমিয়াম', 'সারা দেশে ক্যাশ অন ডেলিভারি'],
           isActive: true,
           createdAt: new Date().toISOString()
         }
@@ -663,11 +663,11 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
               title: 'Summer Cotton Special Offer',
               productId: 'led-high-tops-copy-copy',
               bannerImage: 'https://cdn.shopify.com/s/files/1/0712/1820/0746/files/Generated_Image_January_25_2026_-_7_56PM.png?v=1780922542',
-              headline: 'এক্সক্লুসিভ সামার কটন কালেকশন ২০২৬',
-              subheadline: 'শহরের সেরা আরামদায়ক ও প্রিমিয়াম কোয়ালিটি পাঞ্জাবি। সীমিত সময়ের জন্য বিশেষ ডিসকাউন্ট!',
+              headline: 'এক্সক্লুসিভ কালেকশন ২০২৬',
+              subheadline: 'শহরের সেরা ও প্রিমিয়াম কোয়ালিটি প্রোডাক্ট। সীমিত সময়ের জন্য বিশেষ ডিসকাউন্ট!',
               badgeText: '☀️ SUMMER COTTON SPECIAL',
               discountPrice: 999,
-              features: ['১০০% প্রিমিয়াম সুতি কাপড়', 'অরিজিনাল এম্ব্রয়ডারি ডিজাইন', 'ক্যাশ অন ডেলিভারি সুবিধা', 'সারা দেশে দ্রুত হোম ডেলিভারি'],
+              features: ['১০০% প্রিমিয়াম অরিজিনাল ডিজাইন', 'ক্যাশ অন ডেলিভারি সুবিধা', 'সারা দেশে দ্রুত হোম ডেলিভারি'],
               isActive: true,
               createdAt: new Date().toISOString()
             },
@@ -677,11 +677,11 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
               title: 'Indian Katan Premium Offer',
               productId: 'led-high-tops-copy-copy-copy',
               bannerImage: 'https://cdn.shopify.com/s/files/1/0712/1820/0746/files/GeneratedImageDecember11_2025-9_24PM_1_1_0a4aaf81-51b5-4c82-a4c6-c28720493b07.png?v=1780922516',
-              headline: 'প্রিমিয়াম সিকুয়েন্স এম্বোটারি পাঞ্জাবি',
-              subheadline: 'ইন্ডিয়ান কাতান কাপড়ের প্রিমিয়াম স্নাব বাটন পাঞ্জাবি। রাজকীয় আভিজাত্য ও আধুনিক ফ্যাশনের অনন্য মেলবন্ধন!',
-              badgeText: '👑 INDIKAN KATAN EXCLUSIVE',
+              headline: 'প্রিমিয়াম প্রোডাক্ট',
+              subheadline: 'প্রিমিয়াম প্রোডাক্ট। ও আধুনিক অনন্য মেলবন্ধন!',
+              badgeText: '👑 EXCLUSIVE',
               discountPrice: 1450,
-              features: ['প্রিমিয়াম সিকুয়েন্স এম্বোটারি ডিজাইন', '১০০% অরিজিনাল ইন্ডিয়ান কাতান', 'প্রিমিয়াম স্নাব মেটাল বাটন', 'সারা দেশে ক্যাশ অন ডেলিভারি'],
+              features: ['প্রিমিয়াম ডিজাইন', '১০০% অরিজিনাল প্রিমিয়াম সারা দেশে ক্যাশ অন ডেলিভারি'],
               isActive: true,
               createdAt: new Date().toISOString()
             }
@@ -1301,7 +1301,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Clear old cache to force fresh fetch
     localStorage.removeItem('Shoker ghor_categories');
 
-    return ['১ পিস পাঞ্জাবি অফার', '২ পিস পাঞ্জাবি (কম্বো অফার)', '৩ পিস পাঞ্জাবি (ধামাকা কম্বো)', 'সেমসেং পাঞ্জাবি', 'ইন্ডিয়ান কাতান', 'শাটিন কটন', 'গির্জা কটন', 'চেরি কটন', 'স্টিজ কটন', 'চায়না মাইক্রো স্টিজ'];
+    return ['১ পিস প্রোডাক্ট অফার', '২ পিস প্রোডাক্ট (কম্বো অফার)', '৩ পিস প্রোডাক্ট (ধামাকা কম্বো)', ' প্রোডাক্ট'];
   });
 
   const [categoryImages, setCategoryImages] = useState<Record<string, string[]>>(() => {
@@ -1321,16 +1321,10 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
       } catch (e) {}
     }
     return {
-      '১ পিস পাঞ্জাবি অফার': ['https://images.unsplash.com/photo-1583391733959-b0510f6992dd?auto=format&fit=crop&q=80&w=800', '', ''],
-      '২ পিস পাঞ্জাবি (কম্বো অফার)': ['https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=800', '', ''],
-      '৩ পিস পাঞ্জাবি (ধামাকা কম্বো)': ['https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=800', '', ''],
-      'সেমসেং পাঞ্জাবি': ['https://images.unsplash.com/photo-1583391733959-b0510f6992dd?auto=format&fit=crop&q=80&w=800', '', ''],
-      'ইন্ডিয়ান কাতান': ['https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=800', '', ''],
-      'শাটিন কটন': ['https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=800', '', ''],
-      'গির্জা কটন': ['https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=800', '', ''],
-      'চেরি কটন': ['https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800', '', ''],
-      'স্টিজ কটন': ['https://images.unsplash.com/photo-1578932750294-f5075e85f44a?auto=format&fit=crop&q=80&w=800', '', ''],
-      'চায়না মাইক্রো স্টিজ': ['https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=800', '', '']
+      '১ পিস প্রোডাক্ট অফার': ['https://images.unsplash.com/photo-1583391733959-b0510f6992dd?auto=format&fit=crop&q=80&w=800', '', ''],
+      '২ পিস প্রোডাক্ট (কম্বো অফার)': ['https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=800', '', ''],
+      '৩ পিস প্রোডাক্ট (ধামাকা কম্বো)': ['https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80&w=800', '', ''],
+      'প্রোডাক্ট': ['https://images.unsplash.com/photo-1583391733959-b0510f6992dd?auto=format&fit=crop&q=80&w=800', '', ''],
     };
   });
 
@@ -1930,7 +1924,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Prepare note with item titles & sizes (truncated to avoid going over limits)
     const itemsNote = order.items.map(item => {
       const prod = products.find(p => p.id === item.productId);
-      const title = prod ? prod.title : 'পাঞ্জাবি';
+      const title = prod ? prod.title : 'প্রোডাক্ট';
       return `${title} (সাইজ: ${item.size}, পরিমাণ: ${item.quantity})`;
     }).join('; ').substring(0, 450);
 

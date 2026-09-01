@@ -47,7 +47,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
           </div>
         )}
         <span className="absolute top-[10px] left-[10px] bg-[var(--color-navy)] text-[var(--color-gold)] text-[9px] px-2 py-1 uppercase tracking-wider z-10">
-          {(product.category || 'Panjabi').split(' ')[0]}
+          {(product.category || 'Product').split(' ')[0]}
         </span>
       </a>
       

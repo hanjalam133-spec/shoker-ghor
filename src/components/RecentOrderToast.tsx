@@ -59,7 +59,7 @@ export const RecentOrderToast: React.FC = () => {
               {activeAlert.name} ({activeAlert.city})
             </p>
             <p className="text-[10px] text-gray-500 font-sans">
-              এইমাত্র একটি পাঞ্জাবি অর্ডার কনফার্ম করেছেন! <strong className="text-amber-600 font-semibold">{activeAlert.time}</strong>
+              এইমাত্র একটি প্রোডাক্ট অর্ডার কনফার্ম করেছেন! <strong className="text-amber-600 font-semibold">{activeAlert.time}</strong>
             </p>
           </div>
         </motion.div>

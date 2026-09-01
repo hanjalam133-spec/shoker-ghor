@@ -383,7 +383,7 @@ function AppContent() {
                 এক্সক্লুসিভ ক্যাটেগরি সমূহ
               </h2>
               <p className="text-sm text-gray-600 mt-1 max-w-xl mx-auto">
-                পছন্দের ক্যাটেগরি সিলেক্ট করুন এবং চমৎকার সব পাঞ্জাবি কালেকশন ব্রাউজ করুন
+                পছন্দের ক্যাটেগরি সিলেক্ট করুন এবং চমৎকার সব প্রোডাক্ট কালেকশন ব্রাউজ করুন
               </p>
             </div>
 
@@ -419,7 +419,7 @@ function AppContent() {
                     </span>
                   </div>
                   <span className={`text-sm font-bold transition-colors ${activeCategoryFilter === 'All' ? 'text-[var(--color-navy)] underline underline-offset-4 font-extrabold' : 'text-gray-700 group-hover:text-black'}`}>
-                    সকল পাঞ্জাবি
+                    সকল প্রোডাক্ট
                   </span>
                 </button>
 
@@ -484,7 +484,7 @@ function AppContent() {
             <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">The Shoker ghor Legacy</h2>
             <div className="w-16 h-1 bg-[var(--color-gold)] mx-auto mb-8"></div>
             <p className="text-lg text-white/80 leading-relaxed">
-              For generations, we have been crafting premium panjabis that embody the rich cultural heritage of South Asia. Using only the finest silks, breathable cottons, and intricate zardozi embroidery, Shoker ghor Shop offers more than just clothing — we offer a statement of elegance, tradition, and uncompromising quality.
+              For generations, we have been crafting premium Products that embody the rich cultural heritage of South Asia. Using only the finest silks, breathable cottons, and intricate zardozi embroidery, Shoker ghor Shop offers more than just clothing — we offer a statement of elegance, tradition, and uncompromising quality.
             </p>
           </div>
         </section>

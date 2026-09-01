@@ -3,10 +3,10 @@ export type Size = string;
 
 export interface ProductPackage {
   id: string;
-  name: string;      // e.g. "১ পিস পাঞ্জাবি"
+  name: string;      // e.g. "১ পিস প্রোডাক্ট"
   price: number;     // e.g. 990
   quantity: number;  // e.g. 1
-  description?: string; // e.g. "১ পিস প্রিমিয়াম পাঞ্জাবি"
+  description?: string; // e.g. "১ পিস প্রিমিয়াম প্রোডাক্ট"
   images?: string[]; // Package specific pictures (1 to 3 or more)
 }
 

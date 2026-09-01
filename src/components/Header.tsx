@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ onCartClick, onAdminClick, onHom
             <Search className="w-4 h-4 mr-2 opacity-50" style={{ color: headerTextColor }} />
             <input 
               type="text" 
-              placeholder="Search Panjabi..." 
+              placeholder="Search Product..." 
               style={{ color: headerTextColor }}
               className="bg-transparent border-none outline-none text-[13px] w-full placeholder:opacity-50"
             />

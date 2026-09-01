@@ -81,12 +81,12 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
 
   // Safe fallback product object to guarantee no runtime null/undefined crashes
   const currentProduct: Product = (landingPage ? products.find(p => p.id === landingPage.productId) : selectedProduct) || featuredProduct || products[0] || {
-    id: 'default-panjabi',
-    title: 'প্রিমিয়াম কটন পাঞ্জাবি',
+    id: 'default-Product',
+    title: 'প্রিমিয়াম কটন প্রোডাক্ট',
     price: 1450,
     image: 'https://images.unsplash.com/photo-1583391733959-b0510f6992dd?auto=format&fit=crop&q=80&w=800',
-    category: 'সেমসেং পাঞ্জাবি',
-    description: 'প্রিমিয়াম কোয়ালিটি সুতি পাঞ্জাবি। শহরের সেরা আরামদায়ক ও ট্রেন্ডি ডিজাইন।',
+    category: 'সেমসেং প্রোডাক্ট',
+    description: 'প্রিমিয়াম কোয়ালিটি সুতি প্রোডাক্ট। শহরের সেরা আরামদায়ক ও ট্রেন্ডি ডিজাইন।',
     inStock: true,
     sizes: ['38', '40', '42', '44', '46'],
     rating: 5,
@@ -107,7 +107,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
     } else {
       fullUrl = `${domain}/`;
     }
-    const title = currentProduct?.title || landingPage?.title || 'প্রিমিয়াম পাঞ্জাবি কালেকশন';
+    const title = currentProduct?.title || landingPage?.title || 'প্রিমিয়াম প্রোডাক্ট কালেকশন';
     const copyText = `🎁 ${title}\n🔗 লিংক: ${fullUrl}\n🛒 অর্ডার করতে ভিজিট করুন: ${domain}`;
 
     navigator.clipboard.writeText(copyText).then(() => {
@@ -167,21 +167,21 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
     const fallbackPackages = [
       {
         id: 'default-pkg-1',
-        name: '১ পিস পাঞ্জাবি অফার',
+        name: '১ পিস প্রোডাক্ট অফার',
         price: activeProductPrice,
         quantity: 1,
         description: 'স্ট্যান্ডার্ড প্যাক'
       },
       {
         id: 'default-pkg-2',
-        name: '২ পিস পাঞ্জাবি (কম্বো অফার)',
+        name: '২ পিস প্রোডাক্ট (কম্বো অফার)',
         price: Math.round(activeProductPrice * 2 - 130),
         quantity: 2,
         description: '৳১৩০ ডিসকাউন্ট!'
       },
       {
         id: 'default-pkg-3',
-        name: '৩ পিস পাঞ্জাবি (ধামাকা কম্বো)',
+        name: '৩ পিস প্রোডাক্ট (ধামাকা কম্বো)',
         price: Math.round(activeProductPrice * 3 - 470),
         quantity: 3,
         description: '৳৪৭০ ছাড় + ফ্রি ডেলিভারি!'
@@ -280,7 +280,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
       if (currentProduct && addOrUpdateIncompleteOrder) {
         const selectedImgUrl = activeImage || currentProduct.image;
         const idx = allImages.indexOf(selectedImgUrl);
-        const productCode = idx !== -1 ? `পাঞ্জাবি কোড #${idx + 1}` : undefined;
+        const productCode = idx !== -1 ? `প্রোডাক্ট কোড #${idx + 1}` : undefined;
         const packageDisplaySuffix = selectedPackage ? ` [প্যাকেজ: ${selectedPackage.name}]` : '';
 
         addOrUpdateIncompleteOrder(draftOrderIdRef.current, {
@@ -298,7 +298,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               price: selectedPackage ? Math.round(selectedPackage.price / selectedPackage.quantity) : activeProductPrice,
               size: selectedSize,
               selectedImage: selectedImgUrl,
-              productCode: `${productCode ? productCode : 'পাঞ্জাবি'}${packageDisplaySuffix}`
+              productCode: `${productCode ? productCode : 'প্রোডাক্ট'}${packageDisplaySuffix}`
             }
           ],
           total,
@@ -539,7 +539,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
     // Prepare order details
     const selectedImgUrl = activeImage || currentProduct.image;
     const idx = allImages.indexOf(selectedImgUrl);
-    const productCode = idx !== -1 ? `পাঞ্জাবি কোড #${idx + 1}` : undefined;
+    const productCode = idx !== -1 ? `প্রোডাক্ট কোড #${idx + 1}` : undefined;
     const packageDisplaySuffix = selectedPackage ? ` [প্যাকেজ: ${selectedPackage.name}]` : '';
 
     const orderItems = [{
@@ -548,7 +548,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
       quantity: selectedPackage ? (selectedPackage.quantity * quantity) : quantity,
       price: selectedPackage ? Math.round(selectedPackage.price / selectedPackage.quantity) : activeProductPrice,
       selectedImage: selectedImgUrl,
-      productCode: `${productCode ? productCode : 'পাঞ্জাবি'}${packageDisplaySuffix}`
+      productCode: `${productCode ? productCode : 'প্রোডাক্ট'}${packageDisplaySuffix}`
     }];
 
     setIsSubmitting(true);
@@ -638,7 +638,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               <h1 className="font-serif font-bold text-base text-gray-900 leading-none">
                 {storeName ? (storeName.split(' - ')[0] || storeName) : 'Shoker ghor Shop'}
               </h1>
-              <span className="text-[10px] text-gray-500 block">Luxury Panjabi Collection</span>
+              <span className="text-[10px] text-gray-500 block"></span>
             </div>
           </div>
 
@@ -670,7 +670,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
             </div>
             <div className="truncate">
               <p className="text-xs font-bold text-amber-900 truncate">
-                🎁 {currentProduct.title || landingPage?.title || 'প্রিমিয়াম পাঞ্জাবি কালেকশন'}
+                🎁 {currentProduct.title || landingPage?.title || 'প্রিমিয়াম প্রোডাক্ট কালেকশন'}
               </p>
               <p className="text-[11px] font-mono text-amber-800 truncate select-all">
                 {(() => {
@@ -706,7 +706,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               
               {/* Top Green Ribbon Badge */}
               <div className="inline-block bg-emerald-600 text-white font-extrabold text-sm px-6 py-2 rounded-full shadow-lg border border-emerald-400 tracking-wide animate-pulse">
-                {landingPage.badgeText || '৬টি সেরা মানের পাঞ্জাবি - ফ্রি হোম ডেলিভারি - সারা দেশে'}
+                {landingPage.badgeText || '৬টি সেরা মানের প্রোডাক্ট - ফ্রি হোম ডেলিভারি - সারা দেশে'}
               </div>
 
               {/* Arched Photo Frame Box */}
@@ -748,11 +748,11 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
             </div>
           </section>
 
-          {/* Package Photo Showcase Grid ("ছক্কা প্যাকেজে থাকবে ১টি করে পাঞ্জাবি") */}
+          {/* Package Photo Showcase Grid ("ছক্কা প্যাকেজে থাকবে ১টি করে প্রোডাক্ট") */}
           <section className="py-8 bg-amber-50/50 border-b border-amber-100 px-4">
             <div className="max-w-4xl mx-auto text-center space-y-4">
               <div className="bg-[#800000] text-amber-300 font-extrabold text-base py-2.5 px-6 rounded-xl inline-block shadow-md border border-amber-400/40">
-                {selectedPackage ? `${selectedPackage.name} - আপনার পছন্দের পাঞ্জাবিটি সিলেক্ট করুন:` : 'প্যাকেজে থাকবে পাঞ্জাবি। আপনার পছন্দের ডিজাইন সিলেক্ট করুন-'}
+                {selectedPackage ? `${selectedPackage.name} - আপনার পছন্দের প্রোডাক্টটি সিলেক্ট করুন:` : 'প্যাকেজে থাকবে প্রোডাক্ট। আপনার পছন্দের ডিজাইন সিলেক্ট করুন-'}
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 pt-2">
@@ -777,7 +777,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                     <div className="aspect-[3/4] rounded-xl overflow-hidden bg-gray-100">
                       <img 
                         src={imgUrl} 
-                        alt={`Panjabi Option ${idx + 1}`} 
+                        alt={`Product Option ${idx + 1}`} 
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -963,7 +963,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm space-y-3">
                 <div className="flex items-center justify-between border-b border-gray-100 pb-2">
                   <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide flex items-center gap-1.5">
-                    <ImageIcon className="w-4 h-4 text-amber-500" /> পাঞ্জাবির এইচডি ছবিসমূহ ({allImages.length} টি ছবি)
+                    <ImageIcon className="w-4 h-4 text-amber-500" /> প্রোডাক্টর এইচডি ছবিসমূহ ({allImages.length} টি ছবি)
                   </h4>
                   <span className="text-[10px] bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full font-extrabold">
                     অর্ডার করতে ছবিতে ট্যাপ করুন
@@ -1000,7 +1000,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               {/* Product highlights and Trust cards */}
               <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm space-y-4">
                 <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide border-b border-gray-100 pb-2 flex items-center gap-1">
-                  <Award className="w-4 h-4 text-amber-500" /> কেন Shoker ghor Shop থেকে পাঞ্জাবি কিনবেন?
+                  <Award className="w-4 h-4 text-amber-500" /> কেন Shoker ghor Shop থেকে প্রোডাক্ট কিনবেন?
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="p-3 bg-neutral-50 rounded-lg text-center flex flex-col items-center justify-center border border-gray-50">
@@ -1049,7 +1049,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               {/* Product Selection Slider */}
               <div className="bg-white border border-gray-100 rounded-2xl p-5 md:p-6 shadow-sm space-y-4">
                 <div>
-                  <h3 className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-1">ধাপ ১: আপনার পছন্দের পাঞ্জাবি ও সাইজ বেছে নিন</h3>
+                  <h3 className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-1">ধাপ ১: আপনার পছন্দের প্রোডাক্ট ও সাইজ বেছে নিন</h3>
                   <h2 className="text-xl font-bold font-serif text-neutral-900">পণ্য নির্বাচন করুন (Select Product Style)</h2>
                 </div>
                 
@@ -1092,7 +1092,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                 {/* Active Product Details & Features Display */}
                 <div className="bg-neutral-50 rounded-xl p-4 border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="md:col-span-2 space-y-1">
-                    <span className="text-[10px] uppercase font-bold text-amber-600 tracking-widest block">নির্বাচিত পাঞ্জাবি</span>
+                    <span className="text-[10px] uppercase font-bold text-amber-600 tracking-widest block">নির্বাচিত প্রোডাক্ট</span>
                     <h4 className="font-serif font-bold text-gray-900 text-lg leading-tight">{currentProduct.title}</h4>
                     <p className="text-xs text-gray-600 leading-relaxed font-light mt-1.5 whitespace-pre-line">
                       {currentProduct.description}
@@ -1174,7 +1174,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                     অর্ডার করতে নিচের ফরমটি পূরণ করুন।
                   </h3>
                   <p className="text-xs text-white/90 font-medium mt-0.5">
-                    (অগ্রিম টাকা দিতে হবে না। পাঞ্জাবি রিসিভ করে চেক করে বিল পরিশোধ করবেন!)
+                    (অগ্রিম টাকা দিতে হবে না। প্রোডাক্ট রিসিভ করে চেক করে বিল পরিশোধ করবেন!)
                   </p>
                 </div>
 
@@ -1226,7 +1226,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                                 {pkg.name}
                               </span>
                               <span className={`text-[10px] block mt-0.5 ${isSelected ? 'text-gray-300' : 'text-gray-500'}`}>
-                                পরিমাণ: {pkg.quantity} পিস পাঞ্জাবি
+                                পরিমাণ: {pkg.quantity} পিস প্রোডাক্ট
                               </span>
                             </div>
                           </div>
@@ -1438,7 +1438,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                       <span className="ml-3 text-xs font-bold text-gray-950">ক্যাশ অন ডেলিভারি (হাতে পেয়ে টাকা পরিশোধ করবেন)</span>
                     </label>
                     <p className="text-[10px] text-amber-800 font-light mt-2 leading-relaxed">
-                      💡 <strong>সুবিধা:</strong> আপনার অর্ডারকৃত পাঞ্জাবিটি ডেলিভারি ম্যানের থেকে বুঝে নিয়ে দেখে সম্পূর্ণ পেমেন্ট করতে পারবেন। কোনো অ্যাডভান্স পেমেন্ট করার প্রয়োজন নেই।
+                      💡 <strong>সুবিধা:</strong> আপনার অর্ডারকৃত প্রোডাক্টটি ডেলিভারি ম্যানের থেকে বুঝে নিয়ে দেখে সম্পূর্ণ পেমেন্ট করতে পারবেন। কোনো অ্যাডভান্স পেমেন্ট করার প্রয়োজন নেই।
                     </p>
                   </div>
 
@@ -1595,7 +1595,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               <X className="w-5 h-5" />
             </button>
             
-            <h3 className="text-lg font-bold font-serif mb-4 text-gray-900">📏 পাঞ্জাবি সাইজ চার্ট (Size Chart in Inches)</h3>
+            <h3 className="text-lg font-bold font-serif mb-4 text-gray-900">📏 প্রোডাক্ট সাইজ চার্ট (Size Chart in Inches)</h3>
             
             <div className="overflow-hidden border border-gray-200 rounded-lg">
               <table className="w-full text-xs text-center border-collapse">
