@@ -445,7 +445,7 @@ export const AdminDashboard: React.FC = () => {
 
   const [activeTab, setActiveTab] = useState("home");
   const [isAudioEnabled, setIsAudioEnabled] = useState(() => {
-    return localStorage.getItem("elham_audio_alerts") !== "false";
+    return localStorage.getItem("Shoker ghor_audio_alerts") !== "false";
   });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -796,7 +796,7 @@ export const AdminDashboard: React.FC = () => {
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.setAttribute("href", url);
-      link.setAttribute("download", `elham_products_export_${new Date().toISOString().slice(0,10)}.csv`);
+      link.setAttribute("download", `Shoker ghor_products_export_${new Date().toISOString().slice(0,10)}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -1226,7 +1226,7 @@ export const AdminDashboard: React.FC = () => {
                   referrerPolicy="no-referrer"
                   className="w-8 h-8 rounded-full border border-[var(--color-gold)] object-cover"
                 />
-                <span className="font-bold text-sm tracking-widest text-[var(--color-gold)]">ELHAMSHOP</span>
+                <span className="font-bold text-sm tracking-widest text-[var(--color-gold)]">Shoker ghorSHOP</span>
               </div>
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -1322,7 +1322,7 @@ export const AdminDashboard: React.FC = () => {
             className="w-9 h-9 rounded-full border border-[var(--color-gold)] object-cover shadow-[0_0_8px_rgba(212,175,55,0.15)]"
           />
           <div className="flex flex-col">
-            <span className="font-bold text-sm tracking-widest text-[var(--color-gold)] leading-none">ELHAMSHOP</span>
+            <span className="font-bold text-sm tracking-widest text-[var(--color-gold)] leading-none">Shoker ghorSHOP</span>
             <span className="text-[9px] text-[#8a8a8a] mt-1">Admin Panel</span>
           </div>
         </div>
@@ -1413,7 +1413,7 @@ export const AdminDashboard: React.FC = () => {
             </button>
             <h1 className="text-lg font-semibold text-[#202223] flex items-center gap-2">
               <Package className="w-5 h-5 text-blue-600" />
-              Elham Shop Admin
+              Shoker ghor Shop Admin
             </h1>
           </div>
           <div className="flex items-center gap-3">
@@ -1421,7 +1421,7 @@ export const AdminDashboard: React.FC = () => {
               onClick={() => {
                 const nextVal = !isAudioEnabled;
                 setIsAudioEnabled(nextVal);
-                localStorage.setItem("elham_audio_alerts", nextVal ? "true" : "false");
+                localStorage.setItem("Shoker ghor_audio_alerts", nextVal ? "true" : "false");
                 if (nextVal) {
                   playOrderSuccessSound();
                 }
@@ -1526,7 +1526,7 @@ export const AdminDashboard: React.FC = () => {
                     type="text" 
                     value={nameInput}
                     onChange={(e) => setNameInput(e.target.value)}
-                    placeholder="Elham Shop - Premium Panjabi & Luxury Wear"
+                    placeholder="Shoker ghor Shop - Premium Panjabi & Luxury Wear"
                     className="w-full border border-gray-300 rounded px-3 py-2 text-xs outline-none focus:ring-1 focus:ring-black bg-white"
                   />
                   <span className="text-[10px] text-gray-500 block">ওয়েবসাইটের ট্যাব ও হেডারে এই নাম শো করবে।</span>
@@ -1595,8 +1595,8 @@ export const AdminDashboard: React.FC = () => {
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         type="button"
-                        onClick={() => setBannerInput('/src/assets/images/elham_hero_banner_1785398905544.jpg')}
-                        className={`text-left text-[11px] p-2 rounded border transition-all ${bannerInput.includes('elham_hero') ? 'border-blue-600 bg-blue-50 font-bold text-blue-900' : 'border-gray-200 hover:bg-gray-50 text-gray-700'}`}
+                        onClick={() => setBannerInput('/src/assets/images/Shoker ghor_hero_banner_1785398905544.jpg')}
+                        className={`text-left text-[11px] p-2 rounded border transition-all ${bannerInput.includes('Shoker ghor_hero') ? 'border-blue-600 bg-blue-50 font-bold text-blue-900' : 'border-gray-200 hover:bg-gray-50 text-gray-700'}`}
                       >
                         ✨ মূল ব্যানার (Original)
                       </button>
@@ -3529,7 +3529,7 @@ export const AdminDashboard: React.FC = () => {
                           <td className="px-5 py-3 text-right">
                             <div className="flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                               <button onClick={() => {
-                                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://elhambd.shop';
+                                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://Shoker ghorbd.shop';
                                   const prodUrl = `${domain}/product/${product.id}`;
                                   navigator.clipboard.writeText(prodUrl);
                                   setSuccessModal({
@@ -3757,7 +3757,7 @@ export const AdminDashboard: React.FC = () => {
                   <div className="bg-white border border-[#e1e3e5] rounded-xl shadow-sm overflow-hidden">
                     <div className="px-5 py-4 border-b border-[#e1e3e5] flex justify-between items-center bg-gray-50">
                       <h3 className="font-semibold text-sm text-[#202223]">Recent orders</h3>
-                      <span className="text-xs text-[#6d7175]">ELHAMSHOP Sync active</span>
+                      <span className="text-xs text-[#6d7175]">Shoker ghorSHOP Sync active</span>
                     </div>
 
                     {orders.length === 0 ? (
@@ -4472,7 +4472,7 @@ export const AdminDashboard: React.FC = () => {
                     ).filter(Boolean)
                   };
 
-                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://elhambd.shop';
+                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://Shoker ghorbd.shop';
                   const landingUrl = `${domain}/landing/${page.slug}`;
                   const newTabUrl = landingUrl;
 
@@ -5303,7 +5303,7 @@ export const AdminDashboard: React.FC = () => {
                     </a>
                     <a
                       href="/namecheap-ready.zip"
-                      download="ElhamShop-Namecheap-cPanel-Deployment-Package.zip"
+                      download="Shoker ghorShop-Namecheap-cPanel-Deployment-Package.zip"
                       className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/15 text-gray-200 font-medium rounded-xl border border-white/20 transition-colors text-xs whitespace-nowrap cursor-pointer"
                     >
                       <ExternalLink className="w-4 h-4" />

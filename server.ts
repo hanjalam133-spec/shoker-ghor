@@ -460,7 +460,7 @@ app.use(express.urlencoded({ limit: "200mb", extended: true }));
 
       // READMEs
       const readmeText = `========================================================================
-ELHAM SHOP - NAMECHEAP & cPANEL DEPLOYMENT GUIDE (বাংলা ও ইংরেজি নির্দেশনা)
+Shoker ghor SHOP - NAMECHEAP & cPANEL DEPLOYMENT GUIDE (বাংলা ও ইংরেজি নির্দেশনা)
 ========================================================================
 
 আপনার ই-কমার্স ওয়েবসাইটটি Namecheap বা যেকোনো cPanel হোস্টিংয়ে খুব সহজেই ২ পদ্ধতিতে চালাতে পারবেন:
@@ -481,7 +481,7 @@ ELHAM SHOP - NAMECHEAP & cPANEL DEPLOYMENT GUIDE (বাংলা ও ইংর�
 ------------------------------------------------------------------------
 ১. cPanel থেকে "Setup Node.js App" বা "Node.js Selector" অপশনে যান।
 ২. Create Application এ ক্লিক করে Node.js version 18 বা 20 সিলেক্ট করুন।
-৩. Application root ফোল্ডারের নাম দিন (যেমন: elhamshop) এবং Application Startup File হিসেবে লিখুন:
+৩. Application root ফোল্ডারের নাম দিন (যেমন: Shoker ghorshop) এবং Application Startup File হিসেবে লিখুন:
    app.js
 ৪. Create বাটনে ক্লিক করুন।
 ৫. এবার File Manager দিয়ে আপনার তৈরি করা ফোল্ডারে এই জিপের সমস্ত ফাইল আপলোড করুন।
@@ -547,7 +547,7 @@ try {
 
       const buffer = zip.toBuffer();
       res.setHeader("Content-Type", "application/zip");
-      res.setHeader("Content-Disposition", 'attachment; filename="ElhamShop-Namecheap-cPanel-Deployment-Package.zip"');
+      res.setHeader("Content-Disposition", 'attachment; filename="Shoker ghorShop-Namecheap-cPanel-Deployment-Package.zip"');
       res.send(buffer);
     } catch (err) {
       console.error(err);

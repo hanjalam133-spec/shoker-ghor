@@ -97,7 +97,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
   const [copied, setCopied] = useState(false);
 
   const handleCopyLink = () => {
-    const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://elhambd.shop';
+    const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://Shoker ghorbd.shop';
     let fullUrl = domain;
     if (landingPage) {
       const slug = landingPage.slug || landingPage.id;
@@ -636,7 +636,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
             </div>
             <div>
               <h1 className="font-serif font-bold text-base text-gray-900 leading-none">
-                {storeName ? (storeName.split(' - ')[0] || storeName) : 'Elham Shop'}
+                {storeName ? (storeName.split(' - ')[0] || storeName) : 'Shoker ghor Shop'}
               </h1>
               <span className="text-[10px] text-gray-500 block">Luxury Panjabi Collection</span>
             </div>
@@ -674,7 +674,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               </p>
               <p className="text-[11px] font-mono text-amber-800 truncate select-all">
                 {(() => {
-                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://elhambd.shop';
+                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://Shoker ghorbd.shop';
                   let path = '';
                   if (landingPage) {
                     path = `/landing/${encodeURIComponent(landingPage.slug || landingPage.id)}`;
@@ -912,7 +912,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                   {/* Creator Info */}
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-[14px] text-[var(--color-gold-light)] flex items-center gap-1">
-                      @elhamshopbd <ShieldCheck className="w-4 h-4 text-sky-400 fill-current" />
+                      @Shoker ghorshopbd <ShieldCheck className="w-4 h-4 text-sky-400 fill-current" />
                     </span>
                     <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">Follow</span>
                   </div>
@@ -924,7 +924,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
 
                   {/* Sound Music track info */}
                   <div className="flex items-center gap-1.5 text-[10px] text-gray-300 bg-white/10 px-2 py-1 rounded w-fit overflow-hidden">
-                    <span className="animate-pulse">🎵 Elham Original Sound (Aesthetic Heritage Track)</span>
+                    <span className="animate-pulse">🎵 Shoker ghor Original Sound (Aesthetic Heritage Track)</span>
                   </div>
 
                   {/* Reel interactive mini banner */}
@@ -1000,7 +1000,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
               {/* Product highlights and Trust cards */}
               <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm space-y-4">
                 <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide border-b border-gray-100 pb-2 flex items-center gap-1">
-                  <Award className="w-4 h-4 text-amber-500" /> কেন Elham Shop থেকে পাঞ্জাবি কিনবেন?
+                  <Award className="w-4 h-4 text-amber-500" /> কেন Shoker ghor Shop থেকে পাঞ্জাবি কিনবেন?
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="p-3 bg-neutral-50 rounded-lg text-center flex flex-col items-center justify-center border border-gray-50">
@@ -1488,7 +1488,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                       )}
                     </button>
                     <p className="text-center text-[10px] text-gray-400 mt-2">
-                      🔒 আপনার তথ্য Elham Shop এ সম্পূর্ণ নিরাপদ।
+                      🔒 আপনার তথ্য Shoker ghor Shop এ সম্পূর্ণ নিরাপদ।
                     </p>
                   </div>
                 </form>
@@ -1512,7 +1512,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
                 অর্ডার সফল হয়েছে!
               </span>
               <h2 className="text-3xl font-serif font-bold text-gray-900">আপনার অর্ডারটি কনফার্ম করা হয়েছে!</h2>
-              <p className="text-xs text-gray-500">Elham Shop এ কেনাকাটা করার জন্য আপনাকে ধন্যবাদ। পরবর্তী আপডেটের জন্য আমাদের একজন প্রতিনিধি শীঘ্রই আপনার ফোনে কল করবেন।</p>
+              <p className="text-xs text-gray-500">Shoker ghor Shop এ কেনাকাটা করার জন্য আপনাকে ধন্যবাদ। পরবর্তী আপডেটের জন্য আমাদের একজন প্রতিনিধি শীঘ্রই আপনার ফোনে কল করবেন।</p>
             </div>
 
             {/* Quick Order Details Card */}
@@ -1537,7 +1537,7 @@ export const InstantOrderLanding: React.FC<InstantOrderLandingProps> = ({ onClos
 
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <a 
-                href={getWhatsappUrl(`আসসালামু আলাইকুম, আমি এইমাত্র Elham Shop এ ১টি অর্ডার করেছি। পণ্য: ${currentProduct.title}`)}
+                href={getWhatsappUrl(`আসসালামু আলাইকুম, আমি এইমাত্র Shoker ghor Shop এ ১টি অর্ডার করেছি। পণ্য: ${currentProduct.title}`)}
                 target="_blank" 
                 rel="noreferrer"
                 className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold text-xs py-3.5 px-6 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"

@@ -189,7 +189,7 @@ interface ShopContextType {
 let activeUtterance: SpeechSynthesisUtterance | null = null;
 
 export const playOrderSuccessSound = () => {
-  if (localStorage.getItem("elham_audio_alerts") === "false") {
+  if (localStorage.getItem("Shoker ghor_audio_alerts") === "false") {
     return;
   }
   try {
@@ -358,7 +358,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const urlProduct = getProdDataFromUrl();
 
     // Clear old cache to force fresh fetch
-    localStorage.removeItem('elham_products');
+    localStorage.removeItem('Shoker ghor_products');
 
     let initialList = INITIAL_PRODUCTS;
     if (urlProduct) {
@@ -375,44 +375,44 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const [cart, setCart] = useState<CartItem[]>(() => {
     try {
-      const storedCart = localStorage.getItem('elham_cart');
+      const storedCart = localStorage.getItem('Shoker ghor_cart');
       if (storedCart) {
         const parsed = JSON.parse(storedCart);
         if (Array.isArray(parsed)) return parsed;
       }
     } catch (e) {
-      console.error('Error parsing elham_cart:', e);
+      console.error('Error parsing Shoker ghor_cart:', e);
     }
     return [];
   });
 
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(() => {
-    return localStorage.getItem('elham_admin') === 'true';
+    return localStorage.getItem('Shoker ghor_admin') === 'true';
   });
 
   const [adminUsername, setAdminUsername] = useState<string>(() => {
-    return localStorage.getItem('elham_admin_username') || 'ELHAMSHOP';
+    return localStorage.getItem('Shoker ghor_admin_username') || 'Shoker ghorSHOP';
   });
 
   const [adminPassword, setAdminPassword] = useState<string>(() => {
-    return localStorage.getItem('elham_admin_password') || '123456';
+    return localStorage.getItem('Shoker ghor_admin_password') || '123456';
   });
 
   const [pixelId, setPixelId] = useState<string>(() => {
-    return localStorage.getItem('elham_pixel_id') || '';
+    return localStorage.getItem('Shoker ghor_pixel_id') || '';
   });
 
   const [pixelAccessToken, setPixelAccessToken] = useState<string>(() => {
-    return localStorage.getItem('elham_pixel_token') || '';
+    return localStorage.getItem('Shoker ghor_pixel_token') || '';
   });
 
   const [gtmId, setGtmId] = useState<string>(() => {
-    return localStorage.getItem('elham_gtm_id') || '';
+    return localStorage.getItem('Shoker ghor_gtm_id') || '';
   });
 
-  const [courierService, setCourierService] = useState<string>(() => localStorage.getItem('elham_courier_service') || 'steadfast');
-  const [courierApiKey, setCourierApiKey] = useState<string>(() => localStorage.getItem('elham_courier_api_key') || 'SF_LIVE_API_KEY_7739');
-  const [courierSecretKey, setCourierSecretKey] = useState<string>(() => localStorage.getItem('elham_courier_secret_key') || 'SF_LIVE_SECRET_9831');
+  const [courierService, setCourierService] = useState<string>(() => localStorage.getItem('Shoker ghor_courier_service') || 'steadfast');
+  const [courierApiKey, setCourierApiKey] = useState<string>(() => localStorage.getItem('Shoker ghor_courier_api_key') || 'SF_LIVE_API_KEY_7739');
+  const [courierSecretKey, setCourierSecretKey] = useState<string>(() => localStorage.getItem('Shoker ghor_courier_secret_key') || 'SF_LIVE_SECRET_9831');
 
   const getMigratedStorageItem = (key: string, defaultValue: string) => {
     let val = localStorage.getItem(key);
@@ -424,94 +424,94 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const [storeLogo, setStoreLogo] = useState<string>(() => {
-    return getMigratedStorageItem('elham_store_logo', '/elham_gold_logo_1785398483246.jpg');
+    return getMigratedStorageItem('Shoker ghor_store_logo', '/Shoker ghor_gold_logo_1785398483246.jpg');
   });
 
   const [storeBanner, setStoreBanner] = useState<string>(() => {
-    return getMigratedStorageItem('elham_store_banner', '/elham_hero_banner_1785398905544.jpg');
+    return getMigratedStorageItem('Shoker ghor_store_banner', '/Shoker ghor_hero_banner_1785398905544.jpg');
   });
 
   const [storeName, setStoreName] = useState<string>(() => {
-    return localStorage.getItem('elham_store_name') || 'Elham Shop - Premium Panjabi & Luxury Wear';
+    return localStorage.getItem('Shoker ghor_store_name') || 'Shoker ghor Shop - Premium Panjabi & Luxury Wear';
   });
 
   const [storeFavicon, setStoreFavicon] = useState<string>(() => {
-    return getMigratedStorageItem('elham_store_favicon', '/elham_gold_logo_1785398483246.jpg');
+    return getMigratedStorageItem('Shoker ghor_store_favicon', '/Shoker ghor_gold_logo_1785398483246.jpg');
   });
 
-  const [whatsappNumber, setWhatsappNumber] = useState<string>(() => localStorage.getItem('elham_whatsapp_number') || '8801756994483');
-  const [phoneNumber, setPhoneNumber] = useState<string>(() => localStorage.getItem('elham_phone_number') || '01756994483');
-  const [messengerUrl, setMessengerUrl] = useState<string>(() => localStorage.getItem('elham_messenger_url') || 'https://m.me/61561088721085');
-  const [facebookPageUrl, setFacebookPageUrl] = useState<string>(() => localStorage.getItem('elham_fb_page_url') || 'https://www.facebook.com/profile.php?id=61561088721085');
+  const [whatsappNumber, setWhatsappNumber] = useState<string>(() => localStorage.getItem('Shoker ghor_whatsapp_number') || '8801756994483');
+  const [phoneNumber, setPhoneNumber] = useState<string>(() => localStorage.getItem('Shoker ghor_phone_number') || '01756994483');
+  const [messengerUrl, setMessengerUrl] = useState<string>(() => localStorage.getItem('Shoker ghor_messenger_url') || 'https://m.me/61561088721085');
+  const [facebookPageUrl, setFacebookPageUrl] = useState<string>(() => localStorage.getItem('Shoker ghor_fb_page_url') || 'https://www.facebook.com/profile.php?id=61561088721085');
 
-  const [heroBadge, setHeroBadge] = useState<string>(() => localStorage.getItem('elham_hero_badge') || '💎 HERITAGE ELEGANCE • ROYAL COLLECTION');
-  const [heroTitle1, setHeroTitle1] = useState<string>(() => localStorage.getItem('elham_hero_title1') || 'EMBODY REGAL');
-  const [heroTitle2, setHeroTitle2] = useState<string>(() => localStorage.getItem('elham_hero_title2') || 'TRADITION');
-  const [heroSubtitle, setHeroSubtitle] = useState<string>(() => localStorage.getItem('elham_hero_subtitle') || 'Handcrafted Bangladeshi Jamdani weaves, premium royal silk, Kabli suits, and breathable luxury cotton Panjabis designed for Eid, Weddings, and Festive Celebrations.');
+  const [heroBadge, setHeroBadge] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_badge') || '💎 HERITAGE ELEGANCE • ROYAL COLLECTION');
+  const [heroTitle1, setHeroTitle1] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_title1') || 'EMBODY REGAL');
+  const [heroTitle2, setHeroTitle2] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_title2') || 'TRADITION');
+  const [heroSubtitle, setHeroSubtitle] = useState<string>(() => localStorage.getItem('Shoker ghor_hero_subtitle') || 'Handcrafted Bangladeshi Jamdani weaves, premium royal silk, Kabli suits, and breathable luxury cotton Panjabis designed for Eid, Weddings, and Festive Celebrations.');
 
   // Header state
-  const [headerBgColor, setHeaderBgColor] = useState<string>(() => localStorage.getItem('elham_header_bg_color') || '#0a1128');
-  const [headerTextColor, setHeaderTextColor] = useState<string>(() => localStorage.getItem('elham_header_text_color') || '#ffffff');
+  const [headerBgColor, setHeaderBgColor] = useState<string>(() => localStorage.getItem('Shoker ghor_header_bg_color') || '#0a1128');
+  const [headerTextColor, setHeaderTextColor] = useState<string>(() => localStorage.getItem('Shoker ghor_header_text_color') || '#ffffff');
 
   // Footer state
   const [footerShow, setFooterShow] = useState<boolean>(() => {
-    const val = localStorage.getItem('elham_footer_show');
+    const val = localStorage.getItem('Shoker ghor_footer_show');
     return val !== null ? val === 'true' : true;
   });
-  const [footerBgColor, setFooterBgColor] = useState<string>(() => localStorage.getItem('elham_footer_bg_color') || '#ffffff');
-  const [footerTextColor, setFooterTextColor] = useState<string>(() => localStorage.getItem('elham_footer_text_color') || '#666666');
-  const [footerText, setFooterText] = useState<string>(() => localStorage.getItem('elham_footer_text') || 'Traditional Excellence.');
-  const [footerAddress, setFooterAddress] = useState<string>(() => localStorage.getItem('elham_footer_address') || 'নূরবাগ, কামরাঙ্গীরচর, ঢাকা, বাংলাদেশ');
-  const [footerPayments, setFooterPayments] = useState<string>(() => localStorage.getItem('elham_footer_payments') || 'bKash, Nagad, Rocket, VISA, COD');
+  const [footerBgColor, setFooterBgColor] = useState<string>(() => localStorage.getItem('Shoker ghor_footer_bg_color') || '#ffffff');
+  const [footerTextColor, setFooterTextColor] = useState<string>(() => localStorage.getItem('Shoker ghor_footer_text_color') || '#666666');
+  const [footerText, setFooterText] = useState<string>(() => localStorage.getItem('Shoker ghor_footer_text') || 'Traditional Excellence.');
+  const [footerAddress, setFooterAddress] = useState<string>(() => localStorage.getItem('Shoker ghor_footer_address') || 'নূরবাগ, কামরাঙ্গীরচর, ঢাকা, বাংলাদেশ');
+  const [footerPayments, setFooterPayments] = useState<string>(() => localStorage.getItem('Shoker ghor_footer_payments') || 'bKash, Nagad, Rocket, VISA, COD');
 
   // Instant Order button state
   const [btnInstantOrderShow, setBtnInstantOrderShow] = useState<boolean>(() => {
-    const val = localStorage.getItem('elham_btn_instant_order_show');
+    const val = localStorage.getItem('Shoker ghor_btn_instant_order_show');
     return val !== null ? val === 'true' : true;
   });
-  const [btnInstantOrderText, setBtnInstantOrderText] = useState<string>(() => localStorage.getItem('elham_btn_instant_order_text') || 'ইনস্ট্যান্ট অর্ডার ⚡');
-  const [btnInstantOrderBgColor, setBtnInstantOrderBgColor] = useState<string>(() => localStorage.getItem('elham_btn_instant_order_bg') || '#f59e0b');
-  const [btnInstantOrderTextColor, setBtnInstantOrderTextColor] = useState<string>(() => localStorage.getItem('elham_btn_instant_order_text_color') || '#0a0a0a');
+  const [btnInstantOrderText, setBtnInstantOrderText] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_instant_order_text') || 'ইনস্ট্যান্ট অর্ডার ⚡');
+  const [btnInstantOrderBgColor, setBtnInstantOrderBgColor] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_instant_order_bg') || '#f59e0b');
+  const [btnInstantOrderTextColor, setBtnInstantOrderTextColor] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_instant_order_text_color') || '#0a0a0a');
 
   // Add to Cart button state
   const [btnAddToCartShow, setBtnAddToCartShow] = useState<boolean>(() => {
-    const val = localStorage.getItem('elham_btn_add_to_cart_show');
+    const val = localStorage.getItem('Shoker ghor_btn_add_to_cart_show');
     return val !== null ? val === 'true' : true;
   });
-  const [btnAddToCartText, setBtnAddToCartText] = useState<string>(() => localStorage.getItem('elham_btn_add_to_cart_text') || 'Add to Cart');
-  const [btnAddToCartBgColor, setBtnAddToCartBgColor] = useState<string>(() => localStorage.getItem('elham_btn_add_to_cart_bg') || '#0a1128');
-  const [btnAddToCartTextColor, setBtnAddToCartTextColor] = useState<string>(() => localStorage.getItem('elham_btn_add_to_cart_text_color') || '#ffffff');
+  const [btnAddToCartText, setBtnAddToCartText] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_add_to_cart_text') || 'Add to Cart');
+  const [btnAddToCartBgColor, setBtnAddToCartBgColor] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_add_to_cart_bg') || '#0a1128');
+  const [btnAddToCartTextColor, setBtnAddToCartTextColor] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_add_to_cart_text_color') || '#ffffff');
 
   // Details button state
   const [btnDetailsShow, setBtnDetailsShow] = useState<boolean>(() => {
-    const val = localStorage.getItem('elham_btn_details_show');
+    const val = localStorage.getItem('Shoker ghor_btn_details_show');
     return val !== null ? val === 'true' : true;
   });
-  const [btnDetailsText, setBtnDetailsText] = useState<string>(() => localStorage.getItem('elham_btn_details_text') || 'Details');
-  const [btnDetailsBgColor, setBtnDetailsBgColor] = useState<string>(() => localStorage.getItem('elham_btn_details_bg') || '#ffffff');
-  const [btnDetailsTextColor, setBtnDetailsTextColor] = useState<string>(() => localStorage.getItem('elham_btn_details_text_color') || '#1a1a1a');
+  const [btnDetailsText, setBtnDetailsText] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_details_text') || 'Details');
+  const [btnDetailsBgColor, setBtnDetailsBgColor] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_details_bg') || '#ffffff');
+  const [btnDetailsTextColor, setBtnDetailsTextColor] = useState<string>(() => localStorage.getItem('Shoker ghor_btn_details_text_color') || '#1a1a1a');
 
   // Shipping customization states
-  const [shippingInsideCost, setShippingInsideCost] = useState<number>(() => Number(localStorage.getItem('elham_shipping_inside_cost') || '60'));
-  const [shippingInsideText, setShippingInsideText] = useState<string>(() => localStorage.getItem('elham_shipping_inside_text') || 'ঢাকার ভিতরে');
-  const [shippingInsideDesc, setShippingInsideDesc] = useState<string>(() => localStorage.getItem('elham_shipping_inside_desc') || 'হোম ডেলিভারি চার্জ ৳৬০ (২-৩ দিন)');
-  const [shippingInsideShow, setShippingInsideShow] = useState<boolean>(() => localStorage.getItem('elham_shipping_inside_show') !== 'false');
+  const [shippingInsideCost, setShippingInsideCost] = useState<number>(() => Number(localStorage.getItem('Shoker ghor_shipping_inside_cost') || '60'));
+  const [shippingInsideText, setShippingInsideText] = useState<string>(() => localStorage.getItem('Shoker ghor_shipping_inside_text') || 'ঢাকার ভিতরে');
+  const [shippingInsideDesc, setShippingInsideDesc] = useState<string>(() => localStorage.getItem('Shoker ghor_shipping_inside_desc') || 'হোম ডেলিভারি চার্জ ৳৬০ (২-৩ দিন)');
+  const [shippingInsideShow, setShippingInsideShow] = useState<boolean>(() => localStorage.getItem('Shoker ghor_shipping_inside_show') !== 'false');
 
-  const [shippingOutsideCost, setShippingOutsideCost] = useState<number>(() => Number(localStorage.getItem('elham_shipping_outside_cost') || '120'));
-  const [shippingOutsideText, setShippingOutsideText] = useState<string>(() => localStorage.getItem('elham_shipping_outside_text') || 'ঢাকার বাইরে');
-  const [shippingOutsideDesc, setShippingOutsideDesc] = useState<string>(() => localStorage.getItem('elham_shipping_outside_desc') || 'কুরিয়ার ডেলিভারি চার্জ ৳১২০ (৩-৫ দিন)');
-  const [shippingOutsideShow, setShippingOutsideShow] = useState<boolean>(() => localStorage.getItem('elham_shipping_outside_show') !== 'false');
+  const [shippingOutsideCost, setShippingOutsideCost] = useState<number>(() => Number(localStorage.getItem('Shoker ghor_shipping_outside_cost') || '120'));
+  const [shippingOutsideText, setShippingOutsideText] = useState<string>(() => localStorage.getItem('Shoker ghor_shipping_outside_text') || 'ঢাকার বাইরে');
+  const [shippingOutsideDesc, setShippingOutsideDesc] = useState<string>(() => localStorage.getItem('Shoker ghor_shipping_outside_desc') || 'কুরিয়ার ডেলিভারি চার্জ ৳১২০ (৩-৫ দিন)');
+  const [shippingOutsideShow, setShippingOutsideShow] = useState<boolean>(() => localStorage.getItem('Shoker ghor_shipping_outside_show') !== 'false');
 
-  const [freeShippingEnabled, setFreeShippingEnabled] = useState<boolean>(() => localStorage.getItem('elham_free_shipping_enabled') !== 'false');
-  const [freeShippingThreshold, setFreeShippingThreshold] = useState<number>(() => Number(localStorage.getItem('elham_free_shipping_threshold') || '3'));
+  const [freeShippingEnabled, setFreeShippingEnabled] = useState<boolean>(() => localStorage.getItem('Shoker ghor_free_shipping_enabled') !== 'false');
+  const [freeShippingThreshold, setFreeShippingThreshold] = useState<number>(() => Number(localStorage.getItem('Shoker ghor_free_shipping_threshold') || '3'));
 
   const [showCategoryFilterBar, setShowCategoryFilterBar] = useState<boolean>(() => {
-    const val = localStorage.getItem('elham_show_category_filter_bar');
+    const val = localStorage.getItem('Shoker ghor_show_category_filter_bar');
     return val !== null ? val === 'true' : true;
   });
 
   const [menuItems, setMenuItems] = useState<MenuItem[]>(() => {
-    const saved = localStorage.getItem('elham_menu_items');
+    const saved = localStorage.getItem('Shoker ghor_menu_items');
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -529,50 +529,50 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   useEffect(() => {
-    localStorage.setItem('elham_menu_items', JSON.stringify(menuItems));
+    localStorage.setItem('Shoker ghor_menu_items', JSON.stringify(menuItems));
   }, [menuItems]);
 
   useEffect(() => {
-    localStorage.setItem('elham_show_category_filter_bar', String(showCategoryFilterBar));
+    localStorage.setItem('Shoker ghor_show_category_filter_bar', String(showCategoryFilterBar));
   }, [showCategoryFilterBar]);
 
-  useEffect(() => { localStorage.setItem('elham_header_bg_color', headerBgColor); }, [headerBgColor]);
-  useEffect(() => { localStorage.setItem('elham_header_text_color', headerTextColor); }, [headerTextColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_header_bg_color', headerBgColor); }, [headerBgColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_header_text_color', headerTextColor); }, [headerTextColor]);
   
-  useEffect(() => { localStorage.setItem('elham_footer_show', String(footerShow)); }, [footerShow]);
-  useEffect(() => { localStorage.setItem('elham_footer_bg_color', footerBgColor); }, [footerBgColor]);
-  useEffect(() => { localStorage.setItem('elham_footer_text_color', footerTextColor); }, [footerTextColor]);
-  useEffect(() => { localStorage.setItem('elham_footer_text', footerText); }, [footerText]);
-  useEffect(() => { localStorage.setItem('elham_footer_address', footerAddress); }, [footerAddress]);
-  useEffect(() => { localStorage.setItem('elham_footer_payments', footerPayments); }, [footerPayments]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_footer_show', String(footerShow)); }, [footerShow]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_footer_bg_color', footerBgColor); }, [footerBgColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_footer_text_color', footerTextColor); }, [footerTextColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_footer_text', footerText); }, [footerText]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_footer_address', footerAddress); }, [footerAddress]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_footer_payments', footerPayments); }, [footerPayments]);
 
-  useEffect(() => { localStorage.setItem('elham_btn_instant_order_show', String(btnInstantOrderShow)); }, [btnInstantOrderShow]);
-  useEffect(() => { localStorage.setItem('elham_btn_instant_order_text', btnInstantOrderText); }, [btnInstantOrderText]);
-  useEffect(() => { localStorage.setItem('elham_btn_instant_order_bg', btnInstantOrderBgColor); }, [btnInstantOrderBgColor]);
-  useEffect(() => { localStorage.setItem('elham_btn_instant_order_text_color', btnInstantOrderTextColor); }, [btnInstantOrderTextColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_instant_order_show', String(btnInstantOrderShow)); }, [btnInstantOrderShow]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_instant_order_text', btnInstantOrderText); }, [btnInstantOrderText]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_instant_order_bg', btnInstantOrderBgColor); }, [btnInstantOrderBgColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_instant_order_text_color', btnInstantOrderTextColor); }, [btnInstantOrderTextColor]);
 
-  useEffect(() => { localStorage.setItem('elham_btn_add_to_cart_show', String(btnAddToCartShow)); }, [btnAddToCartShow]);
-  useEffect(() => { localStorage.setItem('elham_btn_add_to_cart_text', btnAddToCartText); }, [btnAddToCartText]);
-  useEffect(() => { localStorage.setItem('elham_btn_add_to_cart_bg', btnAddToCartBgColor); }, [btnAddToCartBgColor]);
-  useEffect(() => { localStorage.setItem('elham_btn_add_to_cart_text_color', btnAddToCartTextColor); }, [btnAddToCartTextColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_add_to_cart_show', String(btnAddToCartShow)); }, [btnAddToCartShow]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_add_to_cart_text', btnAddToCartText); }, [btnAddToCartText]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_add_to_cart_bg', btnAddToCartBgColor); }, [btnAddToCartBgColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_add_to_cart_text_color', btnAddToCartTextColor); }, [btnAddToCartTextColor]);
 
-  useEffect(() => { localStorage.setItem('elham_btn_details_show', String(btnDetailsShow)); }, [btnDetailsShow]);
-  useEffect(() => { localStorage.setItem('elham_btn_details_text', btnDetailsText); }, [btnDetailsText]);
-  useEffect(() => { localStorage.setItem('elham_btn_details_bg', btnDetailsBgColor); }, [btnDetailsBgColor]);
-  useEffect(() => { localStorage.setItem('elham_btn_details_text_color', btnDetailsTextColor); }, [btnDetailsTextColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_details_show', String(btnDetailsShow)); }, [btnDetailsShow]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_details_text', btnDetailsText); }, [btnDetailsText]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_details_bg', btnDetailsBgColor); }, [btnDetailsBgColor]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_btn_details_text_color', btnDetailsTextColor); }, [btnDetailsTextColor]);
 
-  useEffect(() => { localStorage.setItem('elham_shipping_inside_cost', String(shippingInsideCost)); }, [shippingInsideCost]);
-  useEffect(() => { localStorage.setItem('elham_shipping_inside_text', shippingInsideText); }, [shippingInsideText]);
-  useEffect(() => { localStorage.setItem('elham_shipping_inside_desc', shippingInsideDesc); }, [shippingInsideDesc]);
-  useEffect(() => { localStorage.setItem('elham_shipping_inside_show', String(shippingInsideShow)); }, [shippingInsideShow]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_inside_cost', String(shippingInsideCost)); }, [shippingInsideCost]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_inside_text', shippingInsideText); }, [shippingInsideText]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_inside_desc', shippingInsideDesc); }, [shippingInsideDesc]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_inside_show', String(shippingInsideShow)); }, [shippingInsideShow]);
 
-  useEffect(() => { localStorage.setItem('elham_shipping_outside_cost', String(shippingOutsideCost)); }, [shippingOutsideCost]);
-  useEffect(() => { localStorage.setItem('elham_shipping_outside_text', shippingOutsideText); }, [shippingOutsideText]);
-  useEffect(() => { localStorage.setItem('elham_shipping_outside_desc', shippingOutsideDesc); }, [shippingOutsideDesc]);
-  useEffect(() => { localStorage.setItem('elham_shipping_outside_show', String(shippingOutsideShow)); }, [shippingOutsideShow]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_outside_cost', String(shippingOutsideCost)); }, [shippingOutsideCost]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_outside_text', shippingOutsideText); }, [shippingOutsideText]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_outside_desc', shippingOutsideDesc); }, [shippingOutsideDesc]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_shipping_outside_show', String(shippingOutsideShow)); }, [shippingOutsideShow]);
 
-  useEffect(() => { localStorage.setItem('elham_free_shipping_enabled', String(freeShippingEnabled)); }, [freeShippingEnabled]);
-  useEffect(() => { localStorage.setItem('elham_free_shipping_threshold', String(freeShippingThreshold)); }, [freeShippingThreshold]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_free_shipping_enabled', String(freeShippingEnabled)); }, [freeShippingEnabled]);
+  useEffect(() => { localStorage.setItem('Shoker ghor_free_shipping_threshold', String(freeShippingThreshold)); }, [freeShippingThreshold]);
 
   const [landingPages, setLandingPages] = useState<LandingPage[]>(() => {
     const urlLandingPage = getPdataFromUrl();
@@ -1215,52 +1215,52 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('elham_whatsapp_number', whatsappNumber);
+    localStorage.setItem('Shoker ghor_whatsapp_number', whatsappNumber);
   }, [whatsappNumber]);
 
   useEffect(() => {
-    localStorage.setItem('elham_phone_number', phoneNumber);
+    localStorage.setItem('Shoker ghor_phone_number', phoneNumber);
   }, [phoneNumber]);
 
   useEffect(() => {
-    localStorage.setItem('elham_messenger_url', messengerUrl);
+    localStorage.setItem('Shoker ghor_messenger_url', messengerUrl);
   }, [messengerUrl]);
 
   useEffect(() => {
-    localStorage.setItem('elham_fb_page_url', facebookPageUrl);
+    localStorage.setItem('Shoker ghor_fb_page_url', facebookPageUrl);
   }, [facebookPageUrl]);
 
   useEffect(() => {
-    localStorage.setItem('elham_hero_badge', heroBadge);
+    localStorage.setItem('Shoker ghor_hero_badge', heroBadge);
   }, [heroBadge]);
 
   useEffect(() => {
-    localStorage.setItem('elham_hero_title1', heroTitle1);
+    localStorage.setItem('Shoker ghor_hero_title1', heroTitle1);
   }, [heroTitle1]);
 
   useEffect(() => {
-    localStorage.setItem('elham_hero_title2', heroTitle2);
+    localStorage.setItem('Shoker ghor_hero_title2', heroTitle2);
   }, [heroTitle2]);
 
   useEffect(() => {
-    localStorage.setItem('elham_hero_subtitle', heroSubtitle);
+    localStorage.setItem('Shoker ghor_hero_subtitle', heroSubtitle);
   }, [heroSubtitle]);
 
   useEffect(() => {
-    localStorage.setItem('elham_store_logo', storeLogo);
+    localStorage.setItem('Shoker ghor_store_logo', storeLogo);
   }, [storeLogo]);
 
   useEffect(() => {
-    localStorage.setItem('elham_store_banner', storeBanner);
+    localStorage.setItem('Shoker ghor_store_banner', storeBanner);
   }, [storeBanner]);
 
   useEffect(() => {
-    localStorage.setItem('elham_store_name', storeName);
+    localStorage.setItem('Shoker ghor_store_name', storeName);
     document.title = storeName;
   }, [storeName]);
 
   useEffect(() => {
-    localStorage.setItem('elham_store_favicon', storeFavicon);
+    localStorage.setItem('Shoker ghor_store_favicon', storeFavicon);
     let link: HTMLLinkElement | null = document.querySelector("link[rel*='icon']");
     if (!link) {
       link = document.createElement('link');
@@ -1274,7 +1274,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const [blockedPhones, setBlockedPhones] = useState<string[]>(() => {
     try {
-      const storedBlocked = localStorage.getItem('elham_blocked_phones');
+      const storedBlocked = localStorage.getItem('Shoker ghor_blocked_phones');
       if (storedBlocked) return JSON.parse(storedBlocked);
     } catch (e) {
       console.error(e);
@@ -1283,13 +1283,13 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const [enableDailyLimit, setEnableDailyLimit] = useState<boolean>(() => {
-    const saved = localStorage.getItem('elham_enable_daily_limit');
+    const saved = localStorage.getItem('Shoker ghor_enable_daily_limit');
     return saved ? saved === 'true' : true;
   });
 
   const [whitelistedPhones, setWhitelistedPhones] = useState<string[]>(() => {
     try {
-      const saved = localStorage.getItem('elham_whitelisted_phones');
+      const saved = localStorage.getItem('Shoker ghor_whitelisted_phones');
       if (saved) return JSON.parse(saved);
     } catch (e) {
       console.error(e);
@@ -1299,13 +1299,13 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const [categories, setCategories] = useState<Category[]>(() => {
     // Clear old cache to force fresh fetch
-    localStorage.removeItem('elham_categories');
+    localStorage.removeItem('Shoker ghor_categories');
 
     return ['১ পিস পাঞ্জাবি অফার', '২ পিস পাঞ্জাবি (কম্বো অফার)', '৩ পিস পাঞ্জাবি (ধামাকা কম্বো)', 'সেমসেং পাঞ্জাবি', 'ইন্ডিয়ান কাতান', 'শাটিন কটন', 'গির্জা কটন', 'চেরি কটন', 'স্টিজ কটন', 'চায়না মাইক্রো স্টিজ'];
   });
 
   const [categoryImages, setCategoryImages] = useState<Record<string, string[]>>(() => {
-    const stored = localStorage.getItem('elham_category_images');
+    const stored = localStorage.getItem('Shoker ghor_category_images');
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
@@ -1335,12 +1335,12 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   useEffect(() => {
-    localStorage.setItem('elham_category_images', JSON.stringify(categoryImages));
+    localStorage.setItem('Shoker ghor_category_images', JSON.stringify(categoryImages));
   }, [categoryImages]);
 
   const [consignmentMap, setConsignmentMap] = useState<Record<string, string>>(() => {
     try {
-      const storedConsignments = localStorage.getItem('elham_consignments');
+      const storedConsignments = localStorage.getItem('Shoker ghor_consignments');
       if (storedConsignments) return JSON.parse(storedConsignments);
     } catch (e) {
       console.error(e);
@@ -1351,18 +1351,18 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [incompleteOrders, setIncompleteOrders] = useState<Order[]>([]);
 
   const [steadfastBalance, setSteadfastBalance] = useState<number>(() => {
-    const saved = localStorage.getItem('elham_steadfast_balance');
+    const saved = localStorage.getItem('Shoker ghor_steadfast_balance');
     return saved ? Number(saved) : 0;
   });
 
   const [steadfastPaidOut, setSteadfastPaidOut] = useState<number>(() => {
-    const saved = localStorage.getItem('elham_steadfast_paid_out');
+    const saved = localStorage.getItem('Shoker ghor_steadfast_paid_out');
     return saved ? Number(saved) : 0;
   });
 
   const [discountCodes, setDiscountCodes] = useState<DiscountCode[]>(() => {
     try {
-      const stored = localStorage.getItem('elham_discount_codes');
+      const stored = localStorage.getItem('Shoker ghor_discount_codes');
       if (stored) {
         return JSON.parse(stored);
       }
@@ -1370,7 +1370,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.error(e);
     }
     return [
-      { code: 'ELHAM100', type: 'fixed', value: 100, minPurchase: 1000, isActive: true },
+      { code: 'Shoker ghor100', type: 'fixed', value: 100, minPurchase: 1000, isActive: true },
       { code: 'FREE50', type: 'fixed', value: 50, minPurchase: 500, isActive: true },
       { code: 'PROMO10', type: 'percentage', value: 10, minPurchase: 1000, isActive: true }
     ];
@@ -1378,7 +1378,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Sync to localStorage
   useEffect(() => {
-    localStorage.setItem('elham_discount_codes', JSON.stringify(discountCodes));
+    localStorage.setItem('Shoker ghor_discount_codes', JSON.stringify(discountCodes));
   }, [discountCodes]);
 
   useEffect(() => {
@@ -1388,45 +1388,45 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [products]);
 
   useEffect(() => {
-    localStorage.setItem('elham_cart', JSON.stringify(cart));
+    localStorage.setItem('Shoker ghor_cart', JSON.stringify(cart));
   }, [cart]);
 
   useEffect(() => {
-    localStorage.setItem('elham_pixel_id', pixelId);
+    localStorage.setItem('Shoker ghor_pixel_id', pixelId);
   }, [pixelId]);
 
   useEffect(() => {
-    localStorage.setItem('elham_pixel_token', pixelAccessToken);
+    localStorage.setItem('Shoker ghor_pixel_token', pixelAccessToken);
   }, [pixelAccessToken]);
 
   useEffect(() => {
-    localStorage.setItem('elham_gtm_id', gtmId);
+    localStorage.setItem('Shoker ghor_gtm_id', gtmId);
   }, [gtmId]);
 
   useEffect(() => {
-    localStorage.setItem('elham_admin_username', adminUsername);
+    localStorage.setItem('Shoker ghor_admin_username', adminUsername);
   }, [adminUsername]);
 
   useEffect(() => {
-    localStorage.setItem('elham_admin_password', adminPassword);
+    localStorage.setItem('Shoker ghor_admin_password', adminPassword);
   }, [adminPassword]);
 
   useEffect(() => {
-    localStorage.setItem('elham_courier_service', courierService);
+    localStorage.setItem('Shoker ghor_courier_service', courierService);
   }, [courierService]);
 
   useEffect(() => {
-    localStorage.setItem('elham_courier_api_key', courierApiKey);
+    localStorage.setItem('Shoker ghor_courier_api_key', courierApiKey);
   }, [courierApiKey]);
 
   useEffect(() => {
-    localStorage.setItem('elham_courier_secret_key', courierSecretKey);
+    localStorage.setItem('Shoker ghor_courier_secret_key', courierSecretKey);
   }, [courierSecretKey]);
 
 
   useEffect(() => {
     const handleStorage = (e: StorageEvent) => {
-      if (e.key === 'elham_orders' && e.newValue) {
+      if (e.key === 'Shoker ghor_orders' && e.newValue) {
         try {
           const parsed = JSON.parse(e.newValue);
           if (Array.isArray(parsed)) {
@@ -1445,19 +1445,19 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [orders.length]);
 
   useEffect(() => {
-    localStorage.setItem('elham_blocked_phones', JSON.stringify(blockedPhones));
+    localStorage.setItem('Shoker ghor_blocked_phones', JSON.stringify(blockedPhones));
   }, [blockedPhones]);
 
   useEffect(() => {
-    localStorage.setItem('elham_enable_daily_limit', String(enableDailyLimit));
+    localStorage.setItem('Shoker ghor_enable_daily_limit', String(enableDailyLimit));
   }, [enableDailyLimit]);
 
   useEffect(() => {
-    localStorage.setItem('elham_whitelisted_phones', JSON.stringify(whitelistedPhones));
+    localStorage.setItem('Shoker ghor_whitelisted_phones', JSON.stringify(whitelistedPhones));
   }, [whitelistedPhones]);
 
   useEffect(() => {
-    localStorage.setItem('elham_consignments', JSON.stringify(consignmentMap));
+    localStorage.setItem('Shoker ghor_consignments', JSON.stringify(consignmentMap));
   }, [consignmentMap]);
 
   useEffect(() => {
@@ -1468,11 +1468,11 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
 
   useEffect(() => {
-    localStorage.setItem('elham_steadfast_balance', String(steadfastBalance));
+    localStorage.setItem('Shoker ghor_steadfast_balance', String(steadfastBalance));
   }, [steadfastBalance]);
 
   useEffect(() => {
-    localStorage.setItem('elham_steadfast_paid_out', String(steadfastPaidOut));
+    localStorage.setItem('Shoker ghor_steadfast_paid_out', String(steadfastPaidOut));
   }, [steadfastPaidOut]);
 
   // Auto-sync settings to Firestore & API whenever ANY setting state updates
@@ -1525,12 +1525,12 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const loginAdmin = () => {
     setIsAdminLoggedIn(true);
-    localStorage.setItem('elham_admin', 'true');
+    localStorage.setItem('Shoker ghor_admin', 'true');
   };
 
   const logoutAdmin = () => {
     setIsAdminLoggedIn(false);
-    localStorage.removeItem('elham_admin');
+    localStorage.removeItem('Shoker ghor_admin');
   };
 
   const addProduct = async (product: Product) => {
@@ -1968,7 +1968,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const trackingCode = data.consignment?.tracking_code || data.consignment?.consignment_id || `SF-${Math.floor(100000 + Math.random() * 900000)}`;
         setConsignmentMap(prev => {
           const next = { ...prev, [orderId]: String(trackingCode) };
-          localStorage.setItem('elham_consignments', JSON.stringify(next));
+          localStorage.setItem('Shoker ghor_consignments', JSON.stringify(next));
           return next;
         });
         setOrders(prev => prev.map(o => o.id === orderId ? { ...o, status: 'shipped' } : o));
@@ -2008,7 +2008,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
           const trackingCode = directData.consignment?.tracking_code || directData.consignment?.consignment_id || `SF-${Math.floor(100000 + Math.random() * 900000)}`;
           setConsignmentMap(prev => {
             const next = { ...prev, [orderId]: String(trackingCode) };
-            localStorage.setItem('elham_consignments', JSON.stringify(next));
+            localStorage.setItem('Shoker ghor_consignments', JSON.stringify(next));
             return next;
           });
           setOrders(prev => prev.map(o => o.id === orderId ? { ...o, status: 'shipped' } : o));
@@ -2037,7 +2037,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
             const trackingCode = packzyData.consignment?.tracking_code || packzyData.consignment?.consignment_id || `SF-${Math.floor(100000 + Math.random() * 900000)}`;
             setConsignmentMap(prev => {
               const next = { ...prev, [orderId]: String(trackingCode) };
-              localStorage.setItem('elham_consignments', JSON.stringify(next));
+              localStorage.setItem('Shoker ghor_consignments', JSON.stringify(next));
               return next;
             });
             setOrders(prev => prev.map(o => o.id === orderId ? { ...o, status: 'shipped' } : o));
@@ -2064,7 +2064,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setConsignmentMap(prev => {
       const next = { ...prev };
       delete next[orderId];
-      localStorage.setItem('elham_consignments', JSON.stringify(next));
+      localStorage.setItem('Shoker ghor_consignments', JSON.stringify(next));
       return next;
     });
     setOrders(prev => prev.map(o => o.id === orderId ? { ...o, status: 'pending' } : o));

@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ onCartClick, onAdminClick, onHom
   const setIsMobileMenuOpen = (val: boolean) => React_useState(val);
 
   const cartItemsCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-  const displayStoreName = storeName ? (storeName.split(' - ')[0] || storeName) : 'Elham';
+  const displayStoreName = storeName ? (storeName.split(' - ')[0] || storeName) : 'Shoker ghor';
 
   const renderMenuItem = (item: any, isMobile: boolean = false) => {
     if (!item.isActive) return null;

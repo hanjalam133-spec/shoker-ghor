@@ -9,9 +9,9 @@ export const ContactWidget: React.FC = () => {
 
   const cleanPhoneForWa = whatsappNumber.replace(/[^0-9]/g, '');
   
-  const waUrl = `https://wa.me/${cleanPhoneForWa}?text=Assalamu%20Alaikum%20Elham%20Shop!%20I%20want%20to%20know%20more%20about%20your%20products.`;
+  const waUrl = `https://wa.me/${cleanPhoneForWa}?text=Assalamu%20Alaikum%20Shoker ghor%20Shop!%20I%20want%20to%20know%20more%20about%20your%20products.`;
   const telUrl = `tel:${phoneNumber}`;
-  const smsUrl = `sms:${phoneNumber}?body=Assalamu%20Alaikum%20Elham%20Shop!%20I%20want%20to%20order.`;
+  const smsUrl = `sms:${phoneNumber}?body=Assalamu%20Alaikum%20Shoker ghor%20Shop!%20I%20want%20to%20order.`;
   const fbMessengerUrl = messengerUrl.startsWith('http') ? messengerUrl : `https://m.me/${messengerUrl}`;
   const fbPageUrl = facebookPageUrl;
 

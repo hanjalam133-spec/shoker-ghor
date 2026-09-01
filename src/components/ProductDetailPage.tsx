@@ -43,7 +43,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const handleCopyLink = () => {
-    const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://elhambd.shop';
+    const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://Shoker ghorbd.shop';
     const link = `${domain}/product/${getProductSlug(product)}`;
     const copyText = `🎁 ${product.title}\n🔗 লিংক: ${link}\n🛒 অর্ডার করতে ভিজিট করুন: ${domain}`;
     

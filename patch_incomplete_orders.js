@@ -39,7 +39,7 @@ code = code.replace(
 
 // Remove incompleteOrders localStorage sync
 code = code.replace(
-  /  useEffect\(\(\) => \{\n    localStorage\.setItem\('elham_incomplete_orders', JSON\.stringify\(incompleteOrders\)\);\n  \}, \[incompleteOrders\]\);\n/,
+  /  useEffect\(\(\) => \{\n    localStorage\.setItem\('Shoker ghor_incomplete_orders', JSON\.stringify\(incompleteOrders\)\);\n  \}, \[incompleteOrders\]\);\n/,
   ``
 );
 

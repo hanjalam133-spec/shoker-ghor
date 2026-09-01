@@ -17,7 +17,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
 
   const cartItemsCount = cart.reduce((acc, item) => acc + item.quantity, 0);
   const cleanPhoneForWa = whatsappNumber.replace(/[^0-9]/g, '');
-  const waUrl = `https://wa.me/${cleanPhoneForWa}?text=Assalamu%20Alaikum%20Elham%20Shop!%20I%20want%20to%20know%20more%20about%20your%20products.`;
+  const waUrl = `https://wa.me/${cleanPhoneForWa}?text=Assalamu%20Alaikum%20Shoker ghor%20Shop!%20I%20want%20to%20know%20more%20about%20your%20products.`;
 
   const handleCategoryClick = () => {
     // Scroll to categories section smoothly

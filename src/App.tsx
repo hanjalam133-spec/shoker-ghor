@@ -481,10 +481,10 @@ function AppContent() {
         
         <section id="about" className="py-20 bg-[var(--color-navy)] text-white">
           <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">The Elham Legacy</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">The Shoker ghor Legacy</h2>
             <div className="w-16 h-1 bg-[var(--color-gold)] mx-auto mb-8"></div>
             <p className="text-lg text-white/80 leading-relaxed">
-              For generations, we have been crafting premium panjabis that embody the rich cultural heritage of South Asia. Using only the finest silks, breathable cottons, and intricate zardozi embroidery, Elham Shop offers more than just clothing — we offer a statement of elegance, tradition, and uncompromising quality.
+              For generations, we have been crafting premium panjabis that embody the rich cultural heritage of South Asia. Using only the finest silks, breathable cottons, and intricate zardozi embroidery, Shoker ghor Shop offers more than just clothing — we offer a statement of elegance, tradition, and uncompromising quality.
             </p>
           </div>
         </section>

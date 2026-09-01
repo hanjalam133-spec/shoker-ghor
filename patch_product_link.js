@@ -3,7 +3,7 @@ let code = fs.readFileSync('src/components/AdminDashboard.tsx', 'utf-8');
 
 code = code.replace(/<button\s*onClick=\{\(\) => handleOpenModal\(product\)\}\s*className="p-1.5 text-\[#6d7175\] hover:bg-\[#e1e3e5\] rounded transition-colors"\s*title="Edit"\s*>\s*<Edit2 className="w-4 h-4" \/>\s*<\/button>/, 
 `<button onClick={() => {
-                                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://elhambd.shop';
+                                  const domain = window.location.origin && !window.location.origin.includes('localhost') ? window.location.origin : 'https://Shoker ghorbd.shop';
                                   const prodUrl = \`\${domain}/product/\${product.id}\`;
                                   navigator.clipboard.writeText(prodUrl);
                                   setSuccessModal({

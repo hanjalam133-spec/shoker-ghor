@@ -147,7 +147,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
         <div className="relative bg-white w-full max-w-md p-10 text-center rounded-sm shadow-2xl">
            <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Order Confirmed!</h2>
-           <p className="text-gray-600 mb-8">Thank you for shopping with Elham Shop. Your order has been placed successfully and is being processed.</p>
+           <p className="text-gray-600 mb-8">Thank you for shopping with Shoker ghor Shop. Your order has been placed successfully and is being processed.</p>
            <button 
              onClick={onClose}
              className="bg-black text-white px-8 py-3 font-medium uppercase tracking-wider hover:bg-yellow-600 transition-colors"

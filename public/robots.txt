@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elhambd.shop/sitemap.xml
+Sitemap: https://Shoker ghorbd.shop/sitemap.xml
