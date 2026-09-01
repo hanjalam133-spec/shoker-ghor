@@ -148,7 +148,7 @@ export const Header: React.FC<HeaderProps> = ({ onCartClick, onAdminClick, onHom
             <h1 className="text-[22px] font-serif font-bold text-[var(--color-gold)] tracking-[2px] uppercase leading-none group-hover:text-[var(--color-gold-light)] transition-colors">
               {displayStoreName}
             </h1>
-            <span className="text-[10px] tracking-[3px] uppercase mt-1 opacity-70" style={{ color: headerTextColor }}>Luxury Panjabi</span>
+            <span className="text-[10px] tracking-[3px] uppercase mt-1 opacity-70" style={{ color: headerTextColor }}></span>
           </div>
         </div>
 
